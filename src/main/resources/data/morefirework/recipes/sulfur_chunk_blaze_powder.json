@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 200,
+  "experience": 0.55,
+  "ingredient": {
+    "item": "minecraft:blaze_powder"
+  },
+  "result": "morefirework:sulfur_chunk"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "morefirework",
+  "version": "${version}",
+
+  "name": "More Explosives and Fireworks",
+  "description": "Adds more explosive related stuff.",
+  "authors": [
+    "sparkierkan7"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/morefirework/icon_explosion.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "morefirework.mod.MorefireworkMod"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "morefirework.mod.MorefireworkClient"
+      }
+    ]
+  },
+  "mixins": [
+    "morefirework.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=1.8.0+kotlin.1.7.0",
+
+    "nbtcrafting": ">=2.2.3"
+
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

@@ -1,0 +1,2 @@
+BUG - When shrapnel bomb is moved in offhand its nbt data is reset to the default.. sometimes???
+	Probably from the appendTooltip nbt thing. 

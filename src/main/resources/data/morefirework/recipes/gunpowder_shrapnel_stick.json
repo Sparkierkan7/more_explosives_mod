@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SBS",
+    " S "
+  ],
+  "key": {
+
+    "B": {
+      "item": "morefirework:gunpowder_bomb"
+    },
+    "S": {
+      "item": "morefirework:iron_shot"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:gunpowder_shrapnel_stick",
+    "count": 1
+
+  }
+}

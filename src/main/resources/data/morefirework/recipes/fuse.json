@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "S  ",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "S": {
+      "item": "minecraft:gunpowder"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:fuse",
+    "count": 4
+
+  }
+}

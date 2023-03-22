@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GG ",
+    "PP ",
+    "PP "
+  ],
+  "key": {
+
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:firework_station_block",
+    "count": 1
+
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "morefirework:block/firework_station_top",
+    "down": "morefirework:block/firework_station_top",
+    "north": "morefirework:block/firework_station_side_1",
+    "east": "morefirework:block/firework_station_side_0",
+    "south": "morefirework:block/firework_station_side_2",
+    "west": "morefirework:block/firework_station_side_0"
+  }
+}

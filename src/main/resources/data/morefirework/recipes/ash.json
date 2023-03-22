@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 400,
+  "experience": 0.55,
+  "ingredient": {
+    "item": "minecraft:charcoal"
+  },
+  "result": "morefirework:ash"
+}

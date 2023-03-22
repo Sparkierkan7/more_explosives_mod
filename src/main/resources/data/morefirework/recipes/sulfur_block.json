@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+
+    "P": {
+      "item": "morefirework:sulfur_chunk"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:sulfur_block",
+    "count": 1
+
+  }
+}

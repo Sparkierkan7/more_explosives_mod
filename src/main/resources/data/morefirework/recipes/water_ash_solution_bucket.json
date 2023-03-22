@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PBP",
+    "PPP"
+  ],
+  "key": {
+
+    "P": {
+      "item": "morefirework:ash"
+    },
+    "B": {
+      "item": "minecraft:water_bucket"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:water_ash_solution_bucket",
+    "count": 1
+
+  }
+}

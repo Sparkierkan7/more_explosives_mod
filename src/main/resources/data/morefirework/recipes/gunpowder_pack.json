@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FF ",
+    "BB ",
+    "BB "
+  ],
+  "key": {
+
+    "B": {
+      "item": "morefirework:gunpowder_bomb"
+    },
+    "F": {
+      "item": "morefirework:fuse"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:gunpowder_pack",
+    "count": 1
+
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "C  ",
+    "S  "
+  ],
+  "key": {
+
+    "P": {
+      "item": "morefirework:pure_potash"
+    },
+    "C": {
+      "item": "minecraft:charcoal"
+    },
+    "S": {
+      "item": "morefirework:sulfur_chunk"
+    }
+
+  },
+  "result": {
+
+    "item": "minecraft:gunpowder",
+    "count": 4
+
+  }
+}

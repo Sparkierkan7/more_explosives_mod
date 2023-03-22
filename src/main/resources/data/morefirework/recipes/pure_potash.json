@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 350,
+  "experience": 0.55,
+  "ingredient": {
+    "item": "morefirework:water_ash_solution_bucket"
+  },
+  "result": "morefirework:pure_potash"
+}

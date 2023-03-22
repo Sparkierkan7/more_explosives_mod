@@ -1,0 +1,25 @@
+{
+
+  "item.morefirework.firecracker": "Firecracker",
+  "item.morefirework.gunpowder_bomb": "Gunpowder Bomb",
+  "item.morefirework.gunpowder_pack": "Gunpowder Pack",
+  "item.morefirework.gunpowder_shrapnel_stick": "Gunpowder Bomb (Shrapnel)",
+  "item.morefirework.iron_shot": "Iron Shot",
+  "item.morefirework.fuse": "Fuse",
+  "item.morefirework.short_musket": "Short Musket",
+
+  "item.morefirework.raw_lead": "Raw Lead",
+  "item.morefirework.lead_ingot": "Lead Ingot",
+  "item.morefirework.potassium_ingot": "Potassium Ingot",
+  "item.morefirework.potassium_powder": "Powdered Potassium",
+  "item.morefirework.pure_potash": "Pure Potash",
+  "item.morefirework.ash": "Ash",
+  "item.morefirework.water_ash_solution_bucket": "Water and Ash Bucket",
+  "item.morefirework.sulfur_chunk": "Sulfur Chunk",
+  "item.morefirework.dense_paper": "Dense Paper",
+
+  "block.morefirework.potassium_block": "Block of Potassium",
+  "block.morefirework.sulfur_block": "Block of Sulfur",
+  "block.morefirework.firework_station": "Fireworks Table"
+
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+
+    "P": {
+      "item": "morefirework:potassium_powder"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:potassium_ingot",
+    "count": 1
+
+  }
+}
