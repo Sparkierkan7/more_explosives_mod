@@ -58,9 +58,6 @@ class GunpowderShrapnelStickItem : Item {
 
             world?.spawnEntity(entity)
 
-            LOGGER.info("CHANGE")
-
-
         }
 
         return super.use(world, user, hand)
