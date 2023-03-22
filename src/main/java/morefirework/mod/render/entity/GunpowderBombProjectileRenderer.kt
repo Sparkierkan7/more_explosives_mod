@@ -1,6 +1,5 @@
 package morefirework.mod.render.entity
 
-import morefirework.mod.entity.projectile.FirecrackerProjectile
 import morefirework.mod.entity.projectile.GunpowderBombProjectile
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment

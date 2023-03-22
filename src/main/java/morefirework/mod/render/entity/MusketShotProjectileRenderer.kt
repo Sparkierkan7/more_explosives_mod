@@ -1,6 +1,6 @@
 package morefirework.mod.render.entity
 
-import morefirework.mod.entity.projectile.*
+import morefirework.mod.entity.projectile.MusketShotProjectile
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.client.render.entity.EntityRendererFactory

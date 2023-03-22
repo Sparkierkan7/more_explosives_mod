@@ -1,16 +1,11 @@
 package morefirework.mod.entity.projectile
 
-import morefirework.mod.MorefireworkMod.Companion.GunpowderBombEntityType
-import morefirework.mod.MorefireworkMod.Companion.IronShotEntityType
-import morefirework.mod.MorefireworkMod.Companion.LOGGER
 import morefirework.mod.MorefireworkMod.Companion.MusketShotEntityType
-import morefirework.mod.item.MorefireworkItems.IRON_SHOT_ITEM
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.damage.DamageSource
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity
 import net.minecraft.item.Item
-import net.minecraft.item.ItemStack
 import net.minecraft.util.hit.EntityHitResult
 import net.minecraft.util.hit.HitResult
 import net.minecraft.world.World

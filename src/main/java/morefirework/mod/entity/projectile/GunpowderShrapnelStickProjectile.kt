@@ -1,21 +1,14 @@
 package morefirework.mod.entity.projectile
 
-import morefirework.mod.MorefireworkMod.Companion.FirecrackerEntityType
-import morefirework.mod.MorefireworkMod.Companion.GunpowderBombEntityType
 import morefirework.mod.MorefireworkMod.Companion.GunpowderShrapnelStickEntityType
 import morefirework.mod.MorefireworkMod.Companion.LOGGER
-import morefirework.mod.item.GunpowderShrapnelStickItem
-import morefirework.mod.item.MorefireworkItems.FIRECRACKER_ITEM
-import morefirework.mod.item.MorefireworkItems.GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_SHRAPNEL_STICK_ITEM
-import morefirework.mod.util.Math.setShootVelocity
 import net.minecraft.client.MinecraftClient
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
-import net.minecraft.nbt.NbtCompound
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.util.hit.HitResult
 import net.minecraft.util.math.Vec3d
