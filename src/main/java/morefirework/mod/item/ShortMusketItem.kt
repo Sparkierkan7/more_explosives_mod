@@ -20,8 +20,8 @@ import net.minecraft.world.World
 
 class ShortMusketItem : Item {
 
-    val maxGunpowder = 4
-    val gunpowderDamageMultiplier = 4f
+    var maxGunpowder = 4
+    var gunpowderDamageMultiplier = 4f
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
