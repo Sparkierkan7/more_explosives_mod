@@ -58,8 +58,6 @@ class GunpowderShrapnelStickItem : Item {
 
             world?.spawnEntity(entity)
 
-            LOGGER.info("ANOTHER TIEST")
-
         }
 
         return super.use(world, user, hand)

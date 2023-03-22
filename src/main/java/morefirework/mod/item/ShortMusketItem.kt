@@ -21,6 +21,9 @@ import java.util.function.Consumer
 
 class ShortMusketItem : Item {
 
+    val maxGunpowder = 4
+    val gunpowderDamageMultiplier = 4f
+
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
     }*/
@@ -48,13 +51,15 @@ class ShortMusketItem : Item {
 
             if (stack!!.nbt!!.getInt("damage") > 0) {
 
-                LOGGER.info("Damage: ${stack!!.nbt!!.getInt("damage")}")
+                //LOGGER.info("Damage: ${stack!!.nbt!!.getInt("damage")}")
 
-                if (stack!!.nbt!!.getString("ammunition") == "iron" && stack!!.nbt!!.getBoolean("gunpowder")) {
+                if (stack!!.nbt!!.getString("ammunition") == "iron" && stack!!.nbt!!.getInt("gunpowder") > 0) {
 
-                    var entity = MusketShotProjectile(world, user as LivingEntity, 16f)
+                    var entity = MusketShotProjectile(world, user as LivingEntity, (stack!!.nbt!!.getInt("gunpowder") * this.gunpowderDamageMultiplier))
                     entity.setVelocity(user, user.pitch, user.yaw, 0.0f, 16.0f, 0.0f)
                     entity.setNoGravity(true)
+
+                    LOGGER.info("DAMAGE: ${(stack!!.nbt!!.getInt("gunpowder") * this.gunpowderDamageMultiplier)}")
 
                     user.pitch -= 2
 
@@ -65,29 +70,39 @@ class ShortMusketItem : Item {
                     MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, user.x, user.y + 1.5, user.z, pshot.x, pshot.y, pshot.z)
 
                     stack!!.nbt!!.putString("ammunition", "null")
-                    stack!!.nbt!!.putBoolean("gunpowder", false)
+                    stack!!.nbt!!.putInt("gunpowder", 0)
 
                     val damage = stack!!.nbt!!.getInt("damage")
 
                     stack!!.nbt!!.putInt("damage", (damage - 1))
 
-                } else if (stack!!.nbt!!.getString("ammunition") == "null" || !stack!!.nbt!!.getBoolean("gunpowder")) {
+                } else if (stack!!.nbt!!.getString("ammunition") == "null") {
 
                     var offStack = user!!.offHandStack
 
                     if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
 
-                        stack!!.nbt!!.putBoolean("gunpowder", true)
+                        if (stack!!.nbt!!.getInt("gunpowder") < this.maxGunpowder) {
 
-                        offStack.count -= 1
+                            val newgun = stack!!.nbt!!.getInt("gunpowder") + 1
+
+                            stack!!.nbt!!.putInt("gunpowder", newgun)
+
+                            offStack.count -= 1
+
+                            user.sendMessage(Text.literal("§6Gunpowder: ${stack!!.nbt!!.getInt("gunpowder")} §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.gunpowderDamageMultiplier)}"), true)
+
+                        }
 
                     }
 
-                    if (offStack.item == ItemStack(MorefireworkItems.IRON_SHOT_ITEM).item) {
+                    if (offStack.item == ItemStack(MorefireworkItems.IRON_SHOT_ITEM).item && stack!!.nbt!!.getInt("gunpowder") != 0) {
 
                         stack!!.nbt!!.putString("ammunition", "iron")
 
                         offStack.count -= 1
+
+                        user.sendMessage(Text.literal("§aReady to Shoot"), true)
 
                     }
 
@@ -119,7 +134,7 @@ class ShortMusketItem : Item {
             var nbt = NbtCompound()
             nbt!!.putBoolean("tooltip_nbt", true)
             nbt!!.putString("ammunition", "null")
-            nbt!!.putBoolean("gunpowder", false)
+            nbt!!.putInt("gunpowder", 0)
             nbt!!.putInt("damage", 256)
 
             stack!!.setNbt(nbt)
