@@ -1,6 +1,6 @@
 {
-  "type": "minecraft:blasting",
-  "cookingtime": 400,
+  "type": "minecraft:smelting",
+  "cookingtime": 275,
   "experience": 0.55,
   "ingredient": {
     "item": "minecraft:charcoal"
