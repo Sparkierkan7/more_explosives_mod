@@ -1,6 +1,6 @@
 {
   "type": "minecraft:blasting",
-  "cookingtime": 450,
+  "cookingtime": 375,
   "experience": 0.55,
   "ingredient": {
     "item": "morefirework:pure_potash"

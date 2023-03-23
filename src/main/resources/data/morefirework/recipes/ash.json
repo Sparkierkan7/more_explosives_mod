@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "cookingtime": 275,
+  "cookingtime": 325,
   "experience": 0.55,
   "ingredient": {
     "item": "minecraft:charcoal"
