@@ -8,7 +8,11 @@ For setup instructions please see the [fabric wiki page](https://fabricmc.net/wi
 
 This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
 
+
+
+
 # Recipes
+List of different recipes in the mod
 
 ## Fireworks Table Recipes
 Used to upgrade or change explosives like bombs
