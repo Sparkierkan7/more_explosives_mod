@@ -9,7 +9,7 @@ This template is available under the CC0 license. Feel free to learn from it and
 List of different recipes in the mod.
 
 ## Fireworks Table Recipes
-Used to upgrade or change explosives like bombs
+Used to upgrade or change explosives like bombs.
 Hold the item you want to change in your main hand
 and hold the item that will be used to change it in your offhand.
 
