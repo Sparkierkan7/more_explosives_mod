@@ -23,6 +23,12 @@ Gunpowder Bomb:
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
   - Gunpowder: increases explosion power by 0.0625, with a maximum of 4.0.
 
+Gunpowder Pack: 
+  - Fuse: extends length of fuse by 5 ticks.
+  - Shears (Wont get consumed): removes 5 ticks from fuse.
+  - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+  - Gunpowder: increases explosion power by 0.0625, with a maximum of 4.0.
+
 Gunpowder Bomb (Shrapnel): 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
