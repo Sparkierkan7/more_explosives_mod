@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSG",
+    "GGG",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "S": {
+      "item": "morefirework:copper_shot"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    }
+  },
+  "result": {
+
+    "item": "morefirework:copper_musket_cartridge",
+    "count": 1
+
+  }
+}

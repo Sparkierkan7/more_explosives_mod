@@ -15,6 +15,8 @@ object MorefireworkItems {
 
     val IRON_SHOT_ITEM = IronShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val COPPER_SHOT_ITEM = CopperShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val IRON_MUSKET_CARTRIDGE_ITEM = IronMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
+    val COPPER_MUSKET_CARTRIDGE_ITEM = CopperMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
     val FUSE_ITEM = FuseItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
     val RAW_LEAD_ITEM = RawLeadItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
