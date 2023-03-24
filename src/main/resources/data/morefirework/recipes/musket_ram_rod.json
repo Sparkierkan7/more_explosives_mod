@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "S  ",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:wool"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:musket_ram_rod",
+    "count": 1
+
+  }
+}

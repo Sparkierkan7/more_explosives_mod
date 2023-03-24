@@ -11,8 +11,10 @@ object MorefireworkItems {
     val GUNPOWDER_SHRAPNEL_STICK_ITEM = GunpowderShrapnelStickItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val GUNPOWDER_PACK_ITEM = GunpowderPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val SHORT_MUSKET_ITEM = ShortMusketItem(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
+    val MUSKET_RAM_ROD = MusketRamRod(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
 
     val IRON_SHOT_ITEM = IronShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val COPPER_SHOT_ITEM = CopperShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val FUSE_ITEM = FuseItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
     val RAW_LEAD_ITEM = RawLeadItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))

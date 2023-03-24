@@ -6,6 +6,7 @@ import morefirework.mod.block.MoreFireworkBlocks.POTASSIUM_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.SULFUR_BLOCK
 import morefirework.mod.entity.projectile.*
 import morefirework.mod.item.MorefireworkItems.ASH_ITEM
+import morefirework.mod.item.MorefireworkItems.COPPER_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.DENSE_PAPER_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRECRACKER_ITEM
 import morefirework.mod.item.MorefireworkItems.FUSE_ITEM
@@ -14,6 +15,7 @@ import morefirework.mod.item.MorefireworkItems.GUNPOWDER_PACK_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_SHRAPNEL_STICK_ITEM
 import morefirework.mod.item.MorefireworkItems.IRON_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.LEAD_INGOT_ITEM
+import morefirework.mod.item.MorefireworkItems.MUSKET_RAM_ROD
 import morefirework.mod.item.MorefireworkItems.POTASSIUM_INGOT_ITEM
 import morefirework.mod.item.MorefireworkItems.POTASSIUM_POWDER_ITEM
 import morefirework.mod.item.MorefireworkItems.PURE_POTASH_ITEM
@@ -130,8 +132,10 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_shot"), IRON_SHOT_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "copper_shot"), COPPER_SHOT_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "fuse"), FUSE_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "short_musket"), SHORT_MUSKET_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "musket_ram_rod"), MUSKET_RAM_ROD)
 
         Registry.register(Registry.ITEM, Identifier("morefirework", "raw_lead"), RAW_LEAD_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "lead_ingot"), LEAD_INGOT_ITEM)

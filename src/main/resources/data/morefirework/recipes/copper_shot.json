@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "P  ",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:copper_ingot"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:copper_shot",
+    "count": 4
+
+  }
+}
