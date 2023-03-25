@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "cookingtime": 300,
+  "experience": 0.55,
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": "morefirework:sulfur_powder"
+}

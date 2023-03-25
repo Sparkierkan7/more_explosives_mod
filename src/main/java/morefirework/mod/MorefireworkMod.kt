@@ -21,6 +21,7 @@ import morefirework.mod.item.MorefireworkItems.LEAD_INGOT_ITEM
 import morefirework.mod.item.MorefireworkItems.MUSKET_RAM_ROD
 import morefirework.mod.item.MorefireworkItems.POTASSIUM_INGOT_ITEM
 import morefirework.mod.item.MorefireworkItems.POTASSIUM_POWDER_ITEM
+import morefirework.mod.item.MorefireworkItems.POWDERED_SULFUR_ITEM
 import morefirework.mod.item.MorefireworkItems.PURE_POTASH_ITEM
 import morefirework.mod.item.MorefireworkItems.RAW_LEAD_ITEM
 import morefirework.mod.item.MorefireworkItems.SHORT_MUSKET_ITEM
@@ -150,6 +151,7 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "ash"), ASH_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "water_ash_solution_bucket"), WATER_ASH_SOLUTION_BUCKET_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "sulfur_chunk"), SULFUR_CHUNK_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "powdered_sulfur"), POWDERED_SULFUR_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "dense_paper"), DENSE_PAPER_ITEM)
 
 

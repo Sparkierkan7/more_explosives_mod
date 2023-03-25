@@ -27,6 +27,7 @@ object MorefireworkItems {
     val ASH_ITEM = AshItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val WATER_ASH_SOLUTION_BUCKET_ITEM = WaterAshSolutionBucketItem(FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(16).group(ItemGroup.MISC))
     val SULFUR_CHUNK_ITEM = SulfurChunkItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val POWDERED_SULFUR_ITEM = PowderedSulfurItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val DENSE_PAPER_ITEM = DensePaperItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
 }
