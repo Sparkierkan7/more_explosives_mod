@@ -4,6 +4,7 @@ import morefirework.mod.block.MoreFireworkBlocks.FIREWORK_STATION_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.LEAD_ORE_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.POTASSIUM_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.SULFUR_BLOCK
+import morefirework.mod.block.MoreFireworkBlocks.SULFUR_ORE_BLOCK
 import morefirework.mod.entity.projectile.*
 import morefirework.mod.item.MorefireworkItems.ASH_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM
@@ -154,6 +155,7 @@ class MorefireworkMod : ModInitializer {
 
         //blocks
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "lead_ore"), LEAD_ORE_BLOCK)
+        Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "sulfur_ore"), SULFUR_ORE_BLOCK)
 
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "potassium_block"), POTASSIUM_BLOCK)
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "sulfur_block"), SULFUR_BLOCK)
@@ -170,11 +172,19 @@ class MorefireworkMod : ModInitializer {
             Identifier(modid, "potassium_block"),
             BlockItem(POTASSIUM_BLOCK, FabricItemSettings())
         )
+
         Registry.register(
             Registry.ITEM,
             Identifier(modid, "sulfur_block"),
             BlockItem(SULFUR_BLOCK, FabricItemSettings())
         )
+
+        Registry.register(
+            Registry.ITEM,
+            Identifier(modid, "sulfur_ore"),
+            BlockItem(SULFUR_ORE_BLOCK, FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS))
+        )
+
         Registry.register(
             Registry.ITEM,
             Identifier(modid, "firework_station_block"),

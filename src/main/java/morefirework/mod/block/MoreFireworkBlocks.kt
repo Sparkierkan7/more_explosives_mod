@@ -7,6 +7,7 @@ import net.minecraft.sound.BlockSoundGroup
 object MoreFireworkBlocks {
 
     val LEAD_ORE_BLOCK: LeadOreBlock = LeadOreBlock(FabricBlockSettings.of(Material.STONE).strength(2f).sounds(BlockSoundGroup.STONE))
+    val SULFUR_ORE_BLOCK: SulfurOreBlock = SulfurOreBlock(FabricBlockSettings.of(Material.STONE).strength(2f).sounds(BlockSoundGroup.STONE))
 
     val POTASSIUM_BLOCK: PotassiumBlock = PotassiumBlock(FabricBlockSettings.of(Material.METAL).strength(2f).sounds(BlockSoundGroup.CANDLE))
     val SULFUR_BLOCK: SulfurBlock = SulfurBlock(FabricBlockSettings.of(Material.STONE).strength(2f).sounds(BlockSoundGroup.TUFF))
