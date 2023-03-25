@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "cookingtime": 325,
+  "cookingtime": 340,
   "experience": 0.55,
   "ingredient": {
     "item": "morefirework:water_ash_solution_bucket"
