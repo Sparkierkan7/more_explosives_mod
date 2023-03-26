@@ -120,7 +120,7 @@ class GunpowderPackItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eFuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Fuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -130,7 +130,7 @@ class GunpowderPackItem : Item {
 
                         var fuse = mainStack.nbt!!.getInt("fuse")
 
-                        if (fuse > 0) {
+                        if (fuse > 40) {
 
                             mainStack.nbt!!.putInt("fuse", (fuse - 5))
 
@@ -140,9 +140,11 @@ class GunpowderPackItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§aRemoved §c5 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
-                        } else if (fuse <= 0) {
+                        } else if (fuse <= 40) {
+
+                            mainStack.nbt!!.putInt("fuse", 40)
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
@@ -150,7 +152,7 @@ class GunpowderPackItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eCannot shorten fuse anymore §c(fuse ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Cannot make fuse less than §c40").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -181,7 +183,7 @@ class GunpowderPackItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eNot enough §6Fuse").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Not enough §cFuse").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -204,7 +206,7 @@ class GunpowderPackItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§aAdded §c0.0625 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§aAdded §60.0625 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                             } else {
 
@@ -213,7 +215,7 @@ class GunpowderPackItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§eNot enough §6Gunpowder").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§6Not enough §cGunpowder").formatted(Formatting.BOLD), true)
 
                             }
 
@@ -225,7 +227,7 @@ class GunpowderPackItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eMaximum power reached §c(${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§eMaximum power reached §6(${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                         }
 

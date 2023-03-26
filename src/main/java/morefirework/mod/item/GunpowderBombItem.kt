@@ -120,7 +120,7 @@ class GunpowderBombItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eFuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Fuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -140,7 +140,7 @@ class GunpowderBombItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§aRemoved §c5 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
                         } else if (fuse <= 0) {
 
@@ -181,7 +181,7 @@ class GunpowderBombItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eNot enough §6Fuse").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Not enough §cFuse").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -204,7 +204,7 @@ class GunpowderBombItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§aAdded §c0.0625 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§aAdded §60.0625 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                             } else {
 
@@ -213,7 +213,7 @@ class GunpowderBombItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§eNot enough §6Gunpowder").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§6Not enough §cGunpowder").formatted(Formatting.BOLD), true)
 
                             }
 
@@ -225,7 +225,7 @@ class GunpowderBombItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eMaximum power reached §c(${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§eMaximum power reached §6(${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                         }
 

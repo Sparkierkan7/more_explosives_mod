@@ -93,22 +93,6 @@ class GunpowderShrapnelStickItem : Item {
 
                     mainStack.nbt!!.putBoolean("tooltip_nbt", false)
 
-                    /*if (offStack.item == ItemStack(Items.REDSTONE).item) {
-
-                        mainStack.nbt!!.putBoolean("light_on_impact", true)
-
-                        offStack.count -= 1
-
-                        val newStack = ItemStack(mainStack.item, mainStack.count)
-                        newStack.setNbt(mainStack.nbt)
-
-                        player.dropStack(newStack)
-                        mainStack.count = 0
-
-                        player.sendMessage(Text.translatable("§aAdded §dLight on Impact").formatted(Formatting.BOLD), true)
-
-                    }*/
-
                     if (offStack.item == ItemStack(Items.REDSTONE).item) {
 
                         if (mainStack.nbt!!.getInt("fuse") >= 20) {
@@ -136,7 +120,7 @@ class GunpowderShrapnelStickItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eFuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Fuse must be greater than 20 ticks.").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -156,7 +140,7 @@ class GunpowderShrapnelStickItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§aRemoved §c5 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
                         } else if (fuse <= 0) {
 
@@ -197,7 +181,7 @@ class GunpowderShrapnelStickItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eNot enough §6Fuse").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Not enough §cFuse").formatted(Formatting.BOLD), true)
 
                         }
 
