@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "P  ",
-    "S  ",
+    "   ",
+    "PGP",
     "   "
   ],
   "key": {
@@ -10,7 +10,7 @@
     "P": {
       "item": "minecraft:paper"
     },
-    "S": {
+    "G": {
       "item": "minecraft:gunpowder"
     }
 
