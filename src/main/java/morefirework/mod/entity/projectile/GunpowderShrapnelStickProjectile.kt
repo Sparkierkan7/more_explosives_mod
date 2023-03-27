@@ -95,7 +95,11 @@ class GunpowderShrapnelStickProjectile : ThrownItemEntity {
                 var maxVelocity = 0.03125
                 var v = Vec3d(Random.nextDouble(-maxVelocity, maxVelocity), Random.nextDouble(-maxVelocity, maxVelocity) + 0.05, Random.nextDouble(-maxVelocity, maxVelocity))
 
-                MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, this.x, this.y, this.z, v.x, v.y, v.z)
+                if (world.isClient()) {
+
+                    MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, this.x, this.y, this.z, v.x, v.y, v.z)
+
+                }
 
             }
 

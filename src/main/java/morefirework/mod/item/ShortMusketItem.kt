@@ -77,7 +77,13 @@ class ShortMusketItem : Item {
                     user!!.playSound(SoundEvents.ENTITY_FIREWORK_ROCKET_BLAST, 3f, 1f)
                     user.itemCooldownManager[this] = 40
                     var pshot = setShootVelocity(user!!.pitch, user.yaw, 0f, 0.125)
-                    MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, user.x, user.y + 1.5, user.z, pshot.x, pshot.y, pshot.z)
+
+                    if (world?.isClient() == true) {
+
+                        MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, user.x, user.y + 1.5, user.z, pshot.x, pshot.y, pshot.z)
+
+                    }
+
 
                     stack!!.nbt!!.putString("ammunition", "null")
                     stack!!.nbt!!.putInt("gunpowder", 0)
