@@ -76,3 +76,21 @@ Gunpowder Bomb (Shrapnel):
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
+# Planned Features
+
+  - Different types of fireworks.
+  - A new tear of explosives. Maybe something similar to nitroglycerin instead of gunpowder.
+  - All colors of smoke bombs
+  - napalm like bomb
+
+# Bugs
+
+  - On servers or lan servers some particles are not visible
+  - Method of spawning particles is horrible
+
+
+
+
+
+
