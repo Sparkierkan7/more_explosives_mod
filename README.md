@@ -14,12 +14,15 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   A simple bomb that explodes within a certain time and witha certain power.
   Thats all.
 
+
 ### Gunpowder Shrapnel Bomb:
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
   entities depending on their velocity.
 
+
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
+
 
 # Recipes
 
