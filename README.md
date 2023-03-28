@@ -27,7 +27,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   Hold a shot item (iron shot, copper shot) in your offhand and right click.
   Then hold gunpowder in your offhand and right click to add (max of 4).
   Once you have loaded the gunpowder hold a ramrod in your offhand and right click.
-  It should say Ready to Shoot.
+  It should say Ready to Shoot, right click to shoot.
 
 ### Iron shot
   Used to load musket or to craft shrapnel bomb.
