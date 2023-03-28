@@ -39,6 +39,12 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 ### Ramrod
   Used to prepare musket for shooting.
 
+### Iron Musket Cartridge
+  Used to instantly load iron shot and gunpowder into musket.
+
+### Copper Musket Cartridge
+  Lesser iron musket cartridge.
+
 # Recipes
 
 List of different recipes in the mod.
