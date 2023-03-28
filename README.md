@@ -20,7 +20,21 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
-  #### Loading:
+  #### Mechanics:
+  Hold a shot item (iron shot, copper shot) in your offhand and right click.
+  Then hold gunpowder in your offhand and right click to add (max of 4).
+  Once you have loaded the gunpowder hold a ramrod in your offhand and right click.
+  It should say Ready to Shoot.
+
+### Iron shot
+  Used to load musket or to craft shrapnel bomb.
+
+### Copper shot
+  Lesser version of iron shot. 
+  Cannot be used to craft shrapnel bomb.
+  
+### Ramrod
+  Used to prepare musket for shooting.
 
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
