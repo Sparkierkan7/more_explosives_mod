@@ -23,7 +23,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
-  #### Mechanics:
+  #### Short Musket Mechanics:
   Hold a shot item (iron shot, copper shot) in your offhand and right click.
   Then hold gunpowder in your offhand and right click to add (max of 4).
   Once you have loaded the gunpowder hold a ramrod in your offhand and right click.
