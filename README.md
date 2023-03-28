@@ -1,4 +1,4 @@
-# More Explosives and Fireworks Mod
+# More Explosives Mod
 
 ## License
 
