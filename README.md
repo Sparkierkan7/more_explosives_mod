@@ -50,6 +50,31 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 ### Copper Musket Cartridge
   Lesser iron musket cartridge.
 
+### Ash
+  Used to make ash and water bucket.
+
+### Ash and Water Bucket
+  Can be cooked in furnace to get potash.
+  Will leave empty bucket when crafted and
+  get consumed when used.
+
+### Potash
+  Part of crafting gunpowder.
+  Can be blasted to make powdered potassium
+  
+### Potassium stuff
+  Useless material right now.
+  - Block: will explode in the rain and snow.
+  - Ingot
+  - Powder
+
+### Sulfur chunk
+  Part of craftin gunpowder.
+  
+### Powdered Sulfur
+  Obtained by blasting coal itself.
+  4 of it will make a sulfur chunk.
+
 # Recipes
 
 List of different recipes in the mod.
