@@ -81,13 +81,13 @@ Gunpowder Bomb (Shrapnel):
 
   - Different types of fireworks.
   - A new tear of explosives. Maybe something similar to nitroglycerin instead of gunpowder.
-  - All colors of smoke bombs
-  - napalm like bomb
+  - All colors of smoke bombs.
+  - napalm like bomb.
 
 # Bugs
 
-  - On servers or lan servers some particles are not visible
-  - Method of spawning particles is horrible
+  - On servers or lan servers some particles are not visible.
+  - Method of spawning particles is horrible.
 
 
 
