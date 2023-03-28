@@ -18,6 +18,9 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
   entities depending on their velocity.
 
+### Gunpowder Pack:
+  Basically a big gunpowder bomb that has a much bigger explosion power.
+
 ### Short Musket:
   A gun. Can shoot different types of shot.
   #### Mechanics:
@@ -35,9 +38,6 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   
 ### Ramrod
   Used to prepare musket for shooting.
-
-### Gunpowder Pack:
-  Basically a big gunpowder bomb that has a much bigger explosion power.
 
 # Recipes
 
