@@ -4,9 +4,15 @@
 
 This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
 
+# Description
+
+Adds stuff related to explosives like bombs and a way to craft gunpowder.
+
+
 # Recipes
 
 List of different recipes in the mod.
+It will be much easier if you use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see firework table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
 Used to upgrade or change explosives like bombs.
