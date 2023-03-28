@@ -10,7 +10,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
 # Items
 
-### Gunpowder bomb:
+#### Gunpowder bomb:
   A simple bomb that explodes within a certain time and witha certain power
   Thats it.
 
