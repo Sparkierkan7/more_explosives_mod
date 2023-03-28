@@ -69,7 +69,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   - Powder
 
 ### Sulfur chunk
-  Part of craftin gunpowder.
+  Part of crafting gunpowder.
   
 ### Powdered Sulfur
   Obtained by blasting coal itself.
