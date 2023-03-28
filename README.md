@@ -8,6 +8,15 @@ This template is available under the CC0 license. Feel free to learn from it and
 
 Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
+# Items
+
+Gunpowder bomb:
+  A simple bomb that explodes within a certain time and witha certain power
+  Thats it.
+
+Gunpowder Shrapnel Bomb:
+  A bomb that does not create an explosion that damages blocks but shoots out tiny pieces of shrapnel that damage
+  entities depending on their velocity.
 
 # Recipes
 
