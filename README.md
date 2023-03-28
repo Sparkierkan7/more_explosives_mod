@@ -28,6 +28,9 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
   Then hold gunpowder in your offhand and right click to add (max of 4).
   Once you have loaded the gunpowder hold a ramrod in your offhand and right click.
   It should say Ready to Shoot, right click to shoot.
+  
+  It does have a durability of 256 but it does not show.
+  When it reaches 0 it will remove from your inventory
 
 ### Iron shot
   Used to load musket or to craft shrapnel bomb.
