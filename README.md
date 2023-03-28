@@ -11,7 +11,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 # Items
 
 ### Gunpowder bomb:
-  A simple bomb that explodes within a certain time and witha certain power.
+  A simple bomb that explodes within a certain time and with a certain power.
   Thats all.
 
 ### Gunpowder Shrapnel Bomb:
