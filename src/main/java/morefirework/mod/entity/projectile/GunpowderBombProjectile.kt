@@ -43,7 +43,7 @@ class GunpowderBombProjectile : ThrownItemEntity {
             this.fuse = nbt.getInt("fuse")
             this.lightOnImpact = nbt.getBoolean("light_on_impact")
 
-        } catch (e: Throwable) { LOGGER.info("${e}") }
+        } catch (e: Throwable) { LOGGER.info("Gunpowder bomb get nbt error: ${e}") }
 
         if (this.lightOnImpact == false) {
 

@@ -44,7 +44,7 @@ class GunpowderShrapnelStickProjectile : ThrownItemEntity {
             this.lightOnImpact = nbt.getBoolean("light_on_impact")
             //LOGGER.info("${this.fuse}")
 
-        } catch (e: Throwable) { LOGGER.info("${e}") }
+        } catch (e: Throwable) { LOGGER.info("Shrapnel stick projectile get nbt error: ${e}") }
 
         owner.mainHandStack.count -= 1
 
