@@ -7,16 +7,11 @@ import morefirework.mod.MorefireworkMod.Companion.GunpowderShrapnelStickEntityTy
 import morefirework.mod.MorefireworkMod.Companion.IronShotEntityType
 import morefirework.mod.MorefireworkMod.Companion.MusketShotEntityType
 import morefirework.mod.render.entity.*
-import morefirework.mod.util.Math.setShootVelocity
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry
 import net.minecraft.client.MinecraftClient
-import net.minecraft.client.network.ClientPlayNetworkHandler
 import net.minecraft.client.option.KeyBinding
-import net.minecraft.client.util.InputUtil
-import org.lwjgl.glfw.GLFW
 import org.slf4j.LoggerFactory
 
 
@@ -40,9 +35,9 @@ class MorefireworkClient : ClientModInitializer {
         EntityRendererRegistry.register(IronShotEntityType, ::IronShotProjectileRenderer)
         EntityRendererRegistry.register(MusketShotEntityType, ::MusketShotProjectileRenderer)
 
-        LOGGER.info("client init")
+        //LOGGER.info("client init")
 
-        airJumpKey = KeyBindingHelper.registerKeyBinding(KeyBinding(
+        /*airJumpKey = KeyBindingHelper.registerKeyBinding(KeyBinding(
 
             "Air Jump",  // The translation key of the keybinding's name
             InputUtil.Type.KEYSYM,  // The type of the keybinding, KEYSYM for keyboard, MOUSE for mouse.
@@ -58,11 +53,11 @@ class MorefireworkClient : ClientModInitializer {
             GLFW.GLFW_KEY_R,  // The keycode of the key
             "Secret hacks" // The translation key of the keybinding's category.
 
-        ))
+        ))*/
 
         ClientTickEvents.END_CLIENT_TICK.register(ClientTickEvents.EndTick { client: MinecraftClient ->
 
-            while (airJumpKey!!.wasPressed()) {
+            /*while (airJumpKey!!.wasPressed()) {
 
                 var player = MinecraftClient.getInstance().player!!
 
@@ -86,7 +81,7 @@ class MorefireworkClient : ClientModInitializer {
 
                 player.setVelocity(dashv)
 
-            }
+            }*/
 
         })
 
