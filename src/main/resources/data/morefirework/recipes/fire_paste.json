@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "W  ",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:gunpowder"
+    },
+    "W": {
+      "item": "minecraft:honeycomb"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:fire_paste",
+    "count": 2
+
+  }
+}

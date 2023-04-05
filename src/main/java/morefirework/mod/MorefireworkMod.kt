@@ -11,6 +11,7 @@ import morefirework.mod.item.MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.DENSE_PAPER_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRECRACKER_ITEM
+import morefirework.mod.item.MorefireworkItems.FIRE_PASTE_ITEM
 import morefirework.mod.item.MorefireworkItems.FUSE_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_PACK_ITEM
@@ -144,6 +145,7 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "fuse"), FUSE_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "short_musket"), SHORT_MUSKET_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "musket_ram_rod"), MUSKET_RAM_ROD)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "fire_paste"), FIRE_PASTE_ITEM)
 
         Registry.register(Registry.ITEM, Identifier("morefirework", "raw_lead"), RAW_LEAD_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "lead_ingot"), LEAD_INGOT_ITEM)

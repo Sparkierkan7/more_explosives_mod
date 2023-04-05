@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " F ",
+    "PGP",
+    " I "
+  ],
+  "key": {
+
+    "P": {
+      "item": "morefirework:dense_paper"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "F": {
+      "item": "morefirework:fuse"
+    },
+    "I": {
+      "item": "morefirework:fire_paste"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:incendiary_bomb",
+    "count": 1
+
+  }
+}

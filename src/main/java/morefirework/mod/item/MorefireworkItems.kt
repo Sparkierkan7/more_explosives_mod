@@ -13,6 +13,7 @@ object MorefireworkItems {
     val INCENDIARY_BOMB_ITEM = IncendiaryBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val SHORT_MUSKET_ITEM = ShortMusketItem(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
     val MUSKET_RAM_ROD = MusketRamRod(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
+    val FIRE_PASTE_ITEM = FirePasteItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
     val IRON_SHOT_ITEM = IronShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val COPPER_SHOT_ITEM = CopperShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
