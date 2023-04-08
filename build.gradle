@@ -18,15 +18,15 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 
-	//maven {
-	//	name "Siphalor's Maven"
-	//	url "https://maven.siphalor.de"
-	//}
-	// For some testing dependencies of Nbt Crafting
-	//maven {
-	//	name "Jitpack"
-	//	url "https://jitpack.io"
-	//}
+	maven {
+		name "Siphalor's Maven"
+		url "https://maven.siphalor.de"
+	}
+	//For some testing dependencies of Nbt Crafting
+	maven {
+		name "Jitpack"
+		url "https://jitpack.io"
+	}
 
 }
 
@@ -45,7 +45,7 @@ dependencies {
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
 	modImplementation "net.fabricmc:fabric-language-kotlin:1.8.2+kotlin.1.7.10"
-	//modImplementation "de.siphalor:nbtcrafting-1.19:2+"
+	modImplementation "de.siphalor:nbtcrafting-1.19:2+"
 
 }
 

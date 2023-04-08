@@ -1,5 +1,6 @@
 package morefirework.mod.item
 
+import morefirework.mod.MorefireworkMod.Companion.LOGGER
 import morefirework.mod.block.MoreFireworkBlocks
 import morefirework.mod.entity.projectile.GunpowderBombProjectile
 import morefirework.mod.util.Math.setShootVelocity
@@ -51,9 +52,33 @@ class GunpowderBombItem : Item {
 
             user.itemCooldownManager[this] = 20
 
+        } else if (hand == Hand.OFF_HAND) {
+
+            var stack = user?.getStackInHand(hand)
+
+            LOGGER.info("${stack?.nbt}")
+
         }
 
         return super.use(world, user, hand)
+
+    }
+
+    override fun onCraft(stack: ItemStack?, world: World?, player: PlayerEntity?) {
+
+        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
+
+            var nbt = NbtCompound()
+            nbt.putFloat("power", 2f)
+            nbt.putInt("fuse", 100)
+            nbt.putBoolean("light_on_impact", false)
+            nbt.putBoolean("tooltip_nbt", true)
+
+            stack?.setNbt(nbt)
+
+        }
+
+        super.onCraft(stack, world, player)
 
     }
 
