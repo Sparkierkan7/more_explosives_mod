@@ -71,6 +71,21 @@ class BeeswaxFireStarterItem : Item {
 
     }
 
+    override fun onCraft(stack: ItemStack?, world: World?, player: PlayerEntity?) {
+
+        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack?.nbt?.getBoolean("tooltip_nbt") == true) {
+
+            var nbt = NbtCompound()
+            nbt.putInt("durability", 64)
+            nbt.putBoolean("tooltip_nbt", true)
+
+            stack?.setNbt(nbt)
+
+        }
+
+        super.onCraft(stack, world, player)
+    }
+
     override fun appendTooltip(
         stack: ItemStack?,
         world: World?,
