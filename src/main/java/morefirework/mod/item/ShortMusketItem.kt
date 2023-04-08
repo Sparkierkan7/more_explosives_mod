@@ -1,7 +1,9 @@
 package morefirework.mod.item
 
+import morefirework.mod.MorefireworkMod
+import morefirework.mod.MorefireworkMod.Companion.LOGGER
 import morefirework.mod.entity.projectile.MusketShotProjectile
-import morefirework.mod.util.Math.setShootVelocity
+import morefirework.mod.util.Math
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
@@ -44,180 +46,201 @@ class ShortMusketItem : Item {
 
         var stack = user?.getStackInHand(hand)
 
-        stack!!.nbt!!.putBoolean("tooltip_nbt", false)
+        try {
 
-        if (hand == Hand.MAIN_HAND) {
+            stack!!.nbt!!.putBoolean("tooltip_nbt", false)
 
-            if (stack.nbt!!.getInt("damage") > 0) {
+            if (hand == Hand.MAIN_HAND) {
 
-                //LOGGER.info("Damage: ${stack!!.nbt!!.getInt("damage")}")
+                if (stack.nbt!!.getInt("damage") > 0) {
 
-                if (stack!!.nbt!!.getString("ammunition") != "null" && stack!!.nbt!!.getInt("gunpowder") > 0 && stack!!.nbt!!.getBoolean("ready") == true) {
+                    //LOGGER.info("Damage: ${stack!!.nbt!!.getInt("damage")}")
 
-                    if (stack!!.nbt!!.getString("ammunition") == "iron") {
+                    if (stack!!.nbt!!.getString("ammunition") != "null" && stack!!.nbt!!.getInt("gunpowder") > 0 && stack!!.nbt!!.getBoolean("ready") == true) {
 
-                        var entity = MusketShotProjectile(world, user as LivingEntity, (stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier))
-                        entity.setVelocity(user, user.pitch, user.yaw, 0.0f, 16.0f, 0.0f)
-                        entity.setNoGravity(true)
+                        if (stack!!.nbt!!.getString("ammunition") == "iron") {
 
-                        world?.spawnEntity(entity)
+                            var entity = MusketShotProjectile(world, user as LivingEntity, (stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier))
+                            entity.setVelocity(user, user.pitch, user.yaw, 0.0f, 16.0f, 0.0f)
+                            entity.setNoGravity(true)
 
-                    } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
+                            world?.spawnEntity(entity)
 
-                        var entity = MusketShotProjectile(world, user as LivingEntity, (stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier))
-                        entity.setVelocity(user, user.pitch, user.yaw, 0.0f, 16.0f, 0.0f)
-                        entity.setNoGravity(true)
+                        } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
 
-                        world?.spawnEntity(entity)
+                            var entity = MusketShotProjectile(world, user as LivingEntity, (stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier))
+                            entity.setVelocity(user, user.pitch, user.yaw, 0.0f, 16.0f, 0.0f)
+                            entity.setNoGravity(true)
 
-                    }
+                            world?.spawnEntity(entity)
 
-                    user!!.pitch -= 2
+                        }
 
-                    user!!.playSound(SoundEvents.ENTITY_FIREWORK_ROCKET_BLAST, 3f, 1f)
-                    user.itemCooldownManager[this] = 40
-                    var pshot = setShootVelocity(user!!.pitch, user.yaw, 0f, 0.125)
+                        user!!.pitch -= 2
 
-                    if (world?.isClient() == true) {
+                        user!!.playSound(SoundEvents.ENTITY_FIREWORK_ROCKET_BLAST, 3f, 1f)
+                        user.itemCooldownManager[this] = 40
+                        var pshot = Math.setShootVelocity(user!!.pitch, user.yaw, 0f, 0.125)
 
-                        MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, user.x, user.y + 1.5, user.z, pshot.x, pshot.y, pshot.z)
+                        if (world?.isClient() == true) {
 
-                    }
+                            MinecraftClient.getInstance().particleManager.addParticle(ParticleTypes.CAMPFIRE_COSY_SMOKE, user.x, user.y + 1.5, user.z, pshot.x, pshot.y, pshot.z)
+
+                        }
 
 
-                    stack!!.nbt!!.putString("ammunition", "null")
-                    stack!!.nbt!!.putInt("gunpowder", 0)
-                    stack!!.nbt!!.putBoolean("ready", false)
+                        stack!!.nbt!!.putString("ammunition", "null")
+                        stack!!.nbt!!.putInt("gunpowder", 0)
+                        stack!!.nbt!!.putBoolean("ready", false)
 
-                    val damage = stack!!.nbt!!.getInt("damage")
+                        val damage = stack!!.nbt!!.getInt("damage")
 
-                    stack!!.nbt!!.putInt("damage", (damage - 1))
+                        stack!!.nbt!!.putInt("damage", (damage - 1))
 
-                } else if (stack!!.nbt!!.getBoolean("ready") == false) {
+                    } else if (stack!!.nbt!!.getBoolean("ready") == false) {
 
-                    var offStack = user!!.offHandStack
+                        var offStack = user!!.offHandStack
 
-                    if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
+                        if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
 
-                        if (stack!!.nbt!!.getString("ammunition") != "null") {
+                            if (stack!!.nbt!!.getString("ammunition") != "null") {
 
-                            if (stack!!.nbt!!.getInt("gunpowder") < this.maxGunpowder) {
+                                if (stack!!.nbt!!.getInt("gunpowder") < this.maxGunpowder) {
 
-                                val newgun = stack!!.nbt!!.getInt("gunpowder") + 1
+                                    val newgun = stack!!.nbt!!.getInt("gunpowder") + 1
 
-                                stack!!.nbt!!.putInt("gunpowder", newgun)
+                                    stack!!.nbt!!.putInt("gunpowder", newgun)
 
-                                offStack.count -= 1
+                                    offStack.count -= 1
 
-                                if (stack!!.nbt!!.getString("ammunition") == "iron") {
+                                    if (stack!!.nbt!!.getString("ammunition") == "iron") {
 
-                                    user.sendMessage(Text.literal("§6Gunpowder: ${stack!!.nbt!!.getInt("gunpowder")} §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier)}"), true)
+                                        user.sendMessage(Text.literal("§6Gunpowder: ${stack!!.nbt!!.getInt("gunpowder")} §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier)}"), true)
 
-                                } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
+                                    } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
 
-                                    user.sendMessage(Text.literal("§6Gunpowder: ${stack!!.nbt!!.getInt("gunpowder")} §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier)}"), true)
+                                        user.sendMessage(Text.literal("§6Gunpowder: ${stack!!.nbt!!.getInt("gunpowder")} §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier)}"), true)
+
+                                    }
+
+                                } else {
+
+                                    if (stack!!.nbt!!.getString("ammunition") == "iron") {
+
+                                        user.sendMessage(Text.literal("§eMaximum Gunpowder Reached §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier)}"), true)
+
+                                    } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
+
+                                        user.sendMessage(Text.literal("§eMaximum Gunpowder Reached §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier)}"), true)
+
+                                    }
 
                                 }
 
                             } else {
 
-                                if (stack!!.nbt!!.getString("ammunition") == "iron") {
-
-                                    user.sendMessage(Text.literal("§eMaximum Gunpowder Reached §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.ironGunpowderDamageMultiplier)}"), true)
-
-                                } else if (stack!!.nbt!!.getString("ammunition") == "copper") {
-
-                                    user.sendMessage(Text.literal("§eMaximum Gunpowder Reached §cDamage: ${(stack!!.nbt!!.getInt("gunpowder") * this.copperGunpowderDamageMultiplier)}"), true)
-
-                                }
+                                user.sendMessage(Text.literal("§6Load Ammunition First"), true)
 
                             }
 
-                        } else {
+                        }
 
-                            user.sendMessage(Text.literal("§6Load Ammunition First"), true)
+                        if (stack!!.nbt!!.getString("ammunition") == "null") {
+
+                            if (offStack.item == ItemStack(MorefireworkItems.IRON_SHOT_ITEM).item) {
+
+                                stack!!.nbt!!.putString("ammunition", "iron")
+
+                                offStack.count -= 1
+
+                                user.sendMessage(Text.literal("§6Iron Shot §eLoaded"), true)
+
+                            }
+
+                            if (offStack.item == ItemStack(MorefireworkItems.COPPER_SHOT_ITEM).item) {
+
+                                stack!!.nbt!!.putString("ammunition", "copper")
+
+                                offStack.count -= 1
+
+                                user.sendMessage(Text.literal("§6Copper Shot §eLoaded"), true)
+
+                            }
+
+                        }
+
+                        if (stack!!.nbt!!.getString("ammunition") == "null" && stack!!.nbt!!.getInt("gunpowder") == 0) {
+
+                            if (offStack.item == ItemStack(MorefireworkItems.IRON_MUSKET_CARTRIDGE_ITEM).item) {
+
+                                stack!!.nbt!!.putInt("gunpowder", 4)
+                                stack!!.nbt!!.putString("ammunition", "iron")
+
+                                user.sendMessage(Text.literal("§eLoaded §6Iron Cartridge"), true)
+                                user.itemCooldownManager[this] = 40
+
+                                offStack.count -= 1
+
+                            }
+
+                            if (offStack.item == ItemStack(MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM).item) {
+
+                                stack!!.nbt!!.putInt("gunpowder", 4)
+                                stack!!.nbt!!.putString("ammunition", "copper")
+
+                                user.sendMessage(Text.literal("§eLoaded §6Copper Cartridge"), true)
+                                user.itemCooldownManager[this] = 40
+
+                                offStack.count -= 1
+
+                            }
+
+                        }
+
+                        if (offStack.item == ItemStack(MorefireworkItems.MUSKET_RAM_ROD).item) {
+
+                            if (stack!!.nbt!!.getInt("gunpowder") > 0) {
+
+                                stack!!.nbt!!.putBoolean("ready", true)
+
+                                user.sendMessage(Text.literal("§aReady to Shoot"), true)
+
+                            }
 
                         }
 
                     }
 
-                    if (stack!!.nbt!!.getString("ammunition") == "null") {
+                } else if (stack.nbt!!.getInt("damage") <= 0) {
 
-                        if (offStack.item == ItemStack(MorefireworkItems.IRON_SHOT_ITEM).item) {
-
-                            stack!!.nbt!!.putString("ammunition", "iron")
-
-                            offStack.count -= 1
-
-                            user.sendMessage(Text.literal("§6Iron Shot §eLoaded"), true)
-
-                        }
-
-                        if (offStack.item == ItemStack(MorefireworkItems.COPPER_SHOT_ITEM).item) {
-
-                            stack!!.nbt!!.putString("ammunition", "copper")
-
-                            offStack.count -= 1
-
-                            user.sendMessage(Text.literal("§6Copper Shot §eLoaded"), true)
-
-                        }
-
-                    }
-
-                    if (stack!!.nbt!!.getString("ammunition") == "null" && stack!!.nbt!!.getInt("gunpowder") == 0) {
-
-                        if (offStack.item == ItemStack(MorefireworkItems.IRON_MUSKET_CARTRIDGE_ITEM).item) {
-
-                            stack!!.nbt!!.putInt("gunpowder", 4)
-                            stack!!.nbt!!.putString("ammunition", "iron")
-
-                            user.sendMessage(Text.literal("§eLoaded §6Iron Cartridge"), true)
-                            user.itemCooldownManager[this] = 40
-
-                            offStack.count -= 1
-
-                        }
-
-                        if (offStack.item == ItemStack(MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM).item) {
-
-                            stack!!.nbt!!.putInt("gunpowder", 4)
-                            stack!!.nbt!!.putString("ammunition", "copper")
-
-                            user.sendMessage(Text.literal("§eLoaded §6Copper Cartridge"), true)
-                            user.itemCooldownManager[this] = 40
-
-                            offStack.count -= 1
-
-                        }
-
-                    }
-
-                    if (offStack.item == ItemStack(MorefireworkItems.MUSKET_RAM_ROD).item) {
-
-                        if (stack!!.nbt!!.getInt("gunpowder") > 0) {
-
-                            stack!!.nbt!!.putBoolean("ready", true)
-
-                            user.sendMessage(Text.literal("§aReady to Shoot"), true)
-
-                        }
-
-                    }
+                    stack.count -= 1
 
                 }
 
-            } else if (stack.nbt!!.getInt("damage") <= 0) {
+                //var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 10.0)
 
-                stack.count -= 1
+            } else if (hand == Hand.OFF_HAND) {
+
+                try {
+
+                    if (world?.isClient() == true) {
+
+                        user!!.sendMessage(Text.literal("§6Durability: §e${stack.nbt!!.getInt("damage")}/256 §6Shot: §e${stack.nbt!!.getString("ammunition")} §6Gunpowder: §7${stack!!.nbt!!.getInt("gunpowder")}"), true)
+
+                    }
+
+                } catch (e: Throwable) {
+
+                    MorefireworkMod.LOGGER.info("Musket error: ${e}")
+
+                }
 
             }
 
-            //var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 10.0)
+        } catch (e: Throwable) {
 
-        } else if (hand == Hand.OFF_HAND) {
+            LOGGER.info("SOURCE OF PAIN: ${e}")
 
-            user!!.sendMessage(Text.literal("§6Durability: §e${stack.nbt!!.getInt("damage")}/256 §6Shot: §e${stack.nbt!!.getString("ammunition")} §6Gunpowder: §7${stack!!.nbt!!.getInt("gunpowder")}"), true)
         }
 
         return super.use(world, user, hand)
