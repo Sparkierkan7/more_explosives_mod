@@ -9,7 +9,6 @@ import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.text.Text
-import net.minecraft.util.Formatting
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
@@ -63,9 +62,10 @@ class FirecrackerItem : Item {
 
         stack?.setNbt(nbt)
 
-        tooltip?.add(Text.translatable("§6Explosion Power: ${stack?.nbt?.getFloat("power")}").formatted(Formatting.GOLD));
+        tooltip?.add(Text.translatable("§cWork in Progress - Use at your own risk"));
 
         super.appendTooltip(stack, world, tooltip, context)
+
     }
 
 }

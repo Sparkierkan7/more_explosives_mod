@@ -1,7 +1,6 @@
 package morefirework.mod.item
 
-import morefirework.mod.entity.projectile.IncendiaryBombProjectile
-import morefirework.mod.util.Math.setShootVelocity
+import morefirework.mod.entity.projectile.FirePasteProjectile
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
@@ -13,7 +12,7 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-class IncendiaryBombItem : Item {
+class BeeswaxFireStarterItem : Item {
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
@@ -38,13 +37,33 @@ class IncendiaryBombItem : Item {
 
             var stack = user?.getStackInHand(hand)
 
-            var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 1.25)
-            var entity = IncendiaryBombProjectile(world, user as LivingEntity, stack)
-            entity.setVelocity(shot)
+            for (i in 0..2) {
 
-            world?.spawnEntity(entity)
+                var entity = FirePasteProjectile(world, user as LivingEntity)
+                entity.setVelocity(user!!, user.pitch, user.yaw, 0.0f, 0.25f, 15f)
 
+                world?.spawnEntity(entity)
+
+            }
+
+            var damage = stack!!.nbt!!.getInt("durability")
+
+            stack!!.nbt!!.putInt("durability", damage - 1)
+            stack!!.nbt!!.putBoolean("tooltip_nbt", false)
+
+            if (stack!!.nbt!!.getInt("durability") <= 0) {
+
+                stack.count -= 1
+
+            }
+
+            user!!.swingHand(hand)
             user.itemCooldownManager[this] = 20
+
+        } else if (hand == Hand.OFF_HAND) {
+
+            var stack = user?.getStackInHand(hand)
+            user!!.sendMessage(Text.literal("§6Durability: §e${stack!!.nbt!!.getInt("durability")}/64"), true)
 
         }
 
@@ -59,12 +78,10 @@ class IncendiaryBombItem : Item {
         context: TooltipContext?
     ) {
 
-        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
+        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack?.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putInt("shrapnel", 64)
-            nbt.putInt("fuse", 75)
-            nbt.putBoolean("light_on_impact", false)
+            nbt.putInt("durability", 64)
             nbt.putBoolean("tooltip_nbt", true)
 
             stack?.setNbt(nbt)

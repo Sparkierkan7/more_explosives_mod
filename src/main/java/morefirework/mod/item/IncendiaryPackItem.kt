@@ -1,6 +1,6 @@
 package morefirework.mod.item
 
-import morefirework.mod.entity.projectile.IncendiaryBombProjectile
+import morefirework.mod.entity.projectile.IncendiaryPackProjectile
 import morefirework.mod.util.Math.setShootVelocity
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
@@ -13,7 +13,7 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-class IncendiaryBombItem : Item {
+class IncendiaryPackItem : Item {
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
@@ -38,13 +38,13 @@ class IncendiaryBombItem : Item {
 
             var stack = user?.getStackInHand(hand)
 
-            var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 1.25)
-            var entity = IncendiaryBombProjectile(world, user as LivingEntity, stack)
+            var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 0.75)
+            var entity = IncendiaryPackProjectile(world, user as LivingEntity, stack)
             entity.setVelocity(shot)
 
             world?.spawnEntity(entity)
 
-            user.itemCooldownManager[this] = 20
+            user.itemCooldownManager[this] = 40
 
         }
 
@@ -62,8 +62,8 @@ class IncendiaryBombItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putInt("shrapnel", 64)
-            nbt.putInt("fuse", 75)
+            nbt.putInt("shrapnel", 256)
+            nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 

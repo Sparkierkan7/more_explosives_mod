@@ -48,7 +48,7 @@ class ShortMusketItem : Item {
 
         if (hand == Hand.MAIN_HAND) {
 
-            if (stack!!.nbt!!.getInt("damage") > 0) {
+            if (stack.nbt!!.getInt("damage") > 0) {
 
                 //LOGGER.info("Damage: ${stack!!.nbt!!.getInt("damage")}")
 
@@ -207,7 +207,7 @@ class ShortMusketItem : Item {
 
                 }
 
-            } else if (stack!!.nbt!!.getInt("damage") <= 0) {
+            } else if (stack.nbt!!.getInt("damage") <= 0) {
 
                 stack.count -= 1
 
@@ -215,6 +215,9 @@ class ShortMusketItem : Item {
 
             //var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 10.0)
 
+        } else if (hand == Hand.OFF_HAND) {
+
+            user!!.sendMessage(Text.literal("§6Durability: §e${stack.nbt!!.getInt("damage")}/256 §6Shot: §e${stack.nbt!!.getString("ammunition")} §6Gunpowder: §7${stack!!.nbt!!.getInt("gunpowder")}"), true)
         }
 
         return super.use(world, user, hand)

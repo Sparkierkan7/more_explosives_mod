@@ -4,6 +4,7 @@
   "item.morefirework.gunpowder_bomb": "Gunpowder Bomb",
   "item.morefirework.incendiary_bomb": "Incendiary Bomb",
   "item.morefirework.gunpowder_pack": "Gunpowder Pack",
+  "item.morefirework.incendiary_pack": "Incendiary Pack",
   "item.morefirework.gunpowder_shrapnel_stick": "Gunpowder Bomb (Shrapnel)",
   "item.morefirework.iron_shot": "Iron Shot",
   "item.morefirework.copper_shot": "Copper Shot",
@@ -13,6 +14,7 @@
   "item.morefirework.short_musket": "Short Musket",
   "item.morefirework.musket_ram_rod": "Ramrod",
   "item.morefirework.fire_paste": "Beeswax Fire Paste",
+  "item.morefirework.beeswax_fire_starter": "Beeswax Fire Starter",
 
   "item.morefirework.raw_lead": "Raw Lead",
   "item.morefirework.lead_ingot": "Lead Ingot",

@@ -49,6 +49,8 @@ class GunpowderBombItem : Item {
 
             world?.spawnEntity(entity)
 
+            user.itemCooldownManager[this] = 20
+
         }
 
         return super.use(world, user, hand)
@@ -62,7 +64,7 @@ class GunpowderBombItem : Item {
         context: TooltipContext?
     ) {
 
-        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack?.nbt?.getBoolean("tooltip_nbt") == true) {
+        if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
             nbt.putFloat("power", 2f)
@@ -80,7 +82,7 @@ class GunpowderBombItem : Item {
     override fun useOnBlock(context: ItemUsageContext?): ActionResult {
 
         var world = context!!.world
-        var player = context!!.player
+        var player = context.player
 
         if (world.getBlockState(context.blockPos) == MoreFireworkBlocks.FIREWORK_STATION_BLOCK.defaultState) {
 

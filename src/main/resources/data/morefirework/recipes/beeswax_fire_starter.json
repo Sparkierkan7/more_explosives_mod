@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "F  ",
+    "   "
+  ],
+  "key": {
+
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "F": {
+      "item": "morefirework:fire_paste"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:beeswax_fire_starter",
+    "count": 1
+
+  }
+}

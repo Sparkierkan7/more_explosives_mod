@@ -10,10 +10,12 @@ object MorefireworkItems {
     val GUNPOWDER_BOMB_ITEM = GunpowderBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val GUNPOWDER_SHRAPNEL_STICK_ITEM = GunpowderShrapnelStickItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val GUNPOWDER_PACK_ITEM = GunpowderPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
+    val INCENDIARY_PACK_ITEM = IncendiaryPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val INCENDIARY_BOMB_ITEM = IncendiaryBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val SHORT_MUSKET_ITEM = ShortMusketItem(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
     val MUSKET_RAM_ROD = MusketRamRod(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
     val FIRE_PASTE_ITEM = FirePasteItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val BEESWAX_FIRE_STARTER_ITEM = BeeswaxFireStarterItem(FabricItemSettings().maxCount(1).group(ItemGroup.TOOLS))
 
     val IRON_SHOT_ITEM = IronShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val COPPER_SHOT_ITEM = CopperShotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
@@ -31,5 +33,8 @@ object MorefireworkItems {
     val SULFUR_CHUNK_ITEM = SulfurChunkItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val POWDERED_SULFUR_ITEM = PowderedSulfurItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val DENSE_PAPER_ITEM = DensePaperItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+
+
+    val FIRE_ITEM = FireItem(FabricItemSettings().maxCount(64))
 
 }
