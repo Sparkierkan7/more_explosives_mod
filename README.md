@@ -12,7 +12,6 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
-  Thats all.
 
 ### Gunpowder Shrapnel Bomb:
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
@@ -20,6 +19,17 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
+  
+### Incendiary Bomb:
+  A fire bomb that flings fire projectiles everywhere that land and create fire.
+
+### Incendiary Pack:
+  Bigger incendiary bomb with a wider range and more fire projectiles.
+
+### Beeswax Fire Starter:
+  Throws fire projectiles in the direction used.
+  Has a durability of 64 like flint and steel.
+  
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
@@ -107,7 +117,7 @@ Gunpowder Bomb (Shrapnel):
   - Different types of fireworks.
   - A new tear of explosives. Maybe something similar to nitroglycerin instead of gunpowder.
   - All colors of smoke bombs.
-  - napalm like bomb.
+  - A multiplier for how many times you do something in the fireworks table
 
 # Bugs
 
