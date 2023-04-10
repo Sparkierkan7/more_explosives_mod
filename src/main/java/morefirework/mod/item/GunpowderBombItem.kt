@@ -157,9 +157,15 @@ class GunpowderBombItem : Item {
 
                         var fuse = mainStack.nbt!!.getInt("fuse")
 
-                        if (fuse > 0) {
+                        if (fuse > 10) {
 
                             mainStack.nbt!!.putInt("fuse", (fuse - 5))
+
+                            if (fuse <= 20) {
+
+                                mainStack.nbt!!.putBoolean("light_on_impact", false)
+
+                            }
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
@@ -169,7 +175,7 @@ class GunpowderBombItem : Item {
 
                             player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
-                        } else if (fuse <= 0) {
+                        } else if (fuse <= 10) {
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
@@ -221,7 +227,7 @@ class GunpowderBombItem : Item {
                             if (offStack.count >= mainStack.count) {
 
                                 val power = mainStack.nbt!!.getFloat("power")
-                                mainStack.nbt!!.putFloat("power", (power + 0.0625f))
+                                mainStack.nbt!!.putFloat("power", (power + 0.25f))
 
                                 val newStack = ItemStack(mainStack.item, mainStack.count)
                                 newStack.setNbt(mainStack.nbt)
@@ -231,7 +237,7 @@ class GunpowderBombItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§aAdded §60.0625 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§aAdded §60.25 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                             } else {
 
