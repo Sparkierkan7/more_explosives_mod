@@ -3,6 +3,8 @@
 Adds stuff related to explosives like bombs and a way to craft gunpowder.
 Focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
 
+If you are looking for explosives more fun than boring old tnt but nothing too crazy, this mod dose just that.
+
 # License
 
 This mod is available under the MIT license.
@@ -97,7 +99,9 @@ You must have these dependencies installed.
 # Recipes
 
 List of different recipes in the mod.
-It will be much easier if you use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see firework table recipes using roughly enough items.
+
+## Items
+use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see fireworks table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
 Used to upgrade or change explosives.
@@ -138,8 +142,3 @@ Incendiary Bomb:
 
   - On servers and lan servers some particles are not visible.
   - Method of spawning particles is horrible.
-
-
-
-
-
