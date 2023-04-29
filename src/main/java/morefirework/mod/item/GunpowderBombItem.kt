@@ -93,7 +93,7 @@ class GunpowderBombItem : Item {
 
             var nbt = NbtCompound()
             nbt.putFloat("power", 2f)
-            nbt.putInt("fuse", 100)
+            nbt.putInt("fuse", 75)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -157,7 +157,7 @@ class GunpowderBombItem : Item {
 
                         var fuse = mainStack.nbt!!.getInt("fuse")
 
-                        if (fuse > 10) {
+                        if (fuse > 15) {
 
                             mainStack.nbt!!.putInt("fuse", (fuse - 5))
 
@@ -175,7 +175,7 @@ class GunpowderBombItem : Item {
 
                             player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
-                        } else if (fuse <= 10) {
+                        } else if (fuse <= 15) {
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)

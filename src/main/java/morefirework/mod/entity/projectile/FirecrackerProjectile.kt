@@ -19,7 +19,7 @@ class FirecrackerProjectile : ThrownItemEntity {
 
     constructor(entityType: EntityType<out ThrownItemEntity?>?, world: World?) : super(entityType, world) {
 
-
+        this.power = 8.0f
 
     }
 
@@ -42,7 +42,7 @@ class FirecrackerProjectile : ThrownItemEntity {
 
     constructor(world: World?, x: Double, y: Double, z: Double) : super(FirecrackerEntityType, x, y, z, world) {
 
-
+        this.power = 8.0f
 
     }
 

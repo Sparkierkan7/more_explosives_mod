@@ -44,7 +44,7 @@ dependencies {
 
 	// modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
 
-	modImplementation "net.fabricmc:fabric-language-kotlin:1.8.2+kotlin.1.7.10"
+	modImplementation "net.fabricmc:fabric-language-kotlin:1.9.3+kotlin.1.8.20"
 	modImplementation "de.siphalor:nbtcrafting-1.19:2+"
 
 }

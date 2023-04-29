@@ -13,7 +13,7 @@
     "sources": ""
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/morefirework/icon_explosion.png",
 
   "environment": "*",
@@ -40,7 +40,7 @@
     "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17",
-    "fabric-language-kotlin": ">=1.8.0+kotlin.1.7.0",
+    "fabric-language-kotlin": ">=1.9.3+kotlin.1.8.20",
 
     "nbtcrafting": ">=2.2.3"
 

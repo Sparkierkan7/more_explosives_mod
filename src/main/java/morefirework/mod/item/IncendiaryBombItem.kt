@@ -149,7 +149,7 @@ class IncendiaryBombItem : Item {
 
                         var fuse = mainStack.nbt!!.getInt("fuse")
 
-                        if (fuse > 10) {
+                        if (fuse > 15) {
 
                             mainStack.nbt!!.putInt("fuse", (fuse - 5))
 
@@ -167,7 +167,7 @@ class IncendiaryBombItem : Item {
 
                             player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
-                        } else if (fuse <= 10) {
+                        } else if (fuse <= 15) {
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
