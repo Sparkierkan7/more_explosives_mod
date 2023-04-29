@@ -100,7 +100,7 @@ You must have these dependencies installed.
 
 List of different recipes in the mod.
 
-## Items
+## Item Recipes
 use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see fireworks table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
