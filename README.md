@@ -1,8 +1,21 @@
 # More Explosives Mod
 
-# Description
-
 Adds stuff related to explosives like bombs and a way to craft gunpowder.
+Focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
+
+# License
+
+This mod is available under the MIT license.
+
+# Dependencies
+
+You must have these dependencies installed.
+
+- [Fabric Language Kotlin](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin) >=1.9.3+kotlin.1.8.20 for 1.19.2
+- [Nbt Crafting](https://modrinth.com/mod/nbt-crafting) >=2.2.3 for 1.19.2
+
+# Credits
+[Siphalor](https://modrinth.com/user/Siphalor) - Nbt Crafting
 
 # Items
 
@@ -62,7 +75,7 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder.
 ### Ash and Water Bucket
   Can be cooked in furnace to get potash.
   Will leave empty bucket when crafted and
-  get consumed when used.
+  get consumed when cooked.
 
 ### Potash
   Part of crafting gunpowder.
@@ -87,23 +100,29 @@ List of different recipes in the mod.
 It will be much easier if you use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see firework table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
-Used to upgrade or change explosives like bombs.
+Used to upgrade or change explosives.
 Hold the item you want to change in your main hand
-and hold the item that will be used to change it in your offhand.
+and hold the item that will be used to change it in your offhand
+and right click.
 
 Gunpowder Bomb: 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
-  - Gunpowder: increases explosion power by 0.0625, with a maximum of 4.0.
+  - Gunpowder: increases explosion power by 0.25, with a maximum of 4.0.
 
 Gunpowder Pack: 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
-  - Gunpowder: increases explosion power by 0.0625, with a maximum of 4.0.
+  - Gunpowder: increases explosion power by 0.25, with a maximum of 7.0.
 
 Gunpowder Bomb (Shrapnel): 
+  - Fuse: extends length of fuse by 5 ticks.
+  - Shears (Wont get consumed): removes 5 ticks from fuse.
+  - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
+Incendiary Bomb: 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
@@ -111,15 +130,14 @@ Gunpowder Bomb (Shrapnel):
 # Planned Features
 
   - Different types of fireworks.
-  - A new tear of explosives. Maybe something similar to nitroglycerin instead of gunpowder.
+  - A new tear of explosives.
   - All colors of smoke bombs.
   - A multiplier for how many times you do something in the fireworks table
 
 # Bugs
 
-  - On servers or lan servers some particles are not visible.
+  - On servers and lan servers some particles are not visible.
   - Method of spawning particles is horrible.
-
 
 
 
