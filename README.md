@@ -3,7 +3,7 @@
 Adds stuff related to explosives like bombs and a way to craft gunpowder.
 Focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
 
-If you are looking for explosives more fun than boring old tnt but nothing too crazy, this mod dose just that.
+If you are looking for explosives more fun than boring old tnt but nothing too crazy, this mod does just that.
 
 # License
 
