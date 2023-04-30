@@ -96,6 +96,18 @@ You must have these dependencies installed.
   Obtained by blasting coal itself.
   4 of it will make a sulfur chunk.
 
+# Item Mechanics
+
+#### Bomb Mechanics for
+ - Gunpowder Bomb
+ - Gunpowder Pack
+ - Gunpowder Shrapnel Bomb
+ - Incendiary Bomb
+ - Incendiary Pack
+<br>
+
+Right click to throw these and it will start the fuse countdown.
+
 # Recipes
 
 List of different recipes in the mod.
