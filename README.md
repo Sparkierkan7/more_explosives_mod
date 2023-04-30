@@ -1,9 +1,8 @@
 # More Explosives Mod
 
-Adds stuff related to explosives like bombs and a way to craft gunpowder.
-Focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
+Adds stuff related to explosives like bombs and a way to craft gunpowder. If you are looking for explosives more fun than boring old tnt but nothing too crazy, this mod does just that.
 
-If you are looking for explosives more fun than boring old tnt but nothing too crazy, this mod does just that.
+Its focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
 
 # License
 
@@ -44,16 +43,6 @@ You must have these dependencies installed.
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
-  #### Short Musket Mechanics:
-  Hold a shot item (iron shot, copper shot) in your offhand and right click.
-  Then hold gunpowder in your offhand
-  and right click to add (max of 4).
-  Once you have loaded the gunpowder
-  hold a ramrod in your offhand and right click.
-  It should say Ready to Shoot, right click to shoot.
-  
-  It does have a durability of 256 but it does not show.
-  When it reaches 0 it will remove from your inventory
 
 ### Iron shot
   Used to load musket or to craft shrapnel bomb.
@@ -107,6 +96,17 @@ You must have these dependencies installed.
 <br>
 
 Right click to throw these and it will start the fuse countdown.
+
+  #### Short Musket Mechanics:
+  Hold a shot item (iron shot, copper shot) in your offhand and right click.
+  Then hold gunpowder in your offhand
+  and right click to add (max of 4).
+  Once you have loaded the gunpowder
+  hold a ramrod in your offhand and right click.
+  It should say Ready to Shoot, right click to shoot.
+  
+  It does have a durability of 256 but it does not show.
+  When it reaches 0 it will remove from your inventory
 
 # Recipes
 
