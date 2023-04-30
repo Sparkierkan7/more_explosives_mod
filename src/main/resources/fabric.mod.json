@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/morefirework/icon_explosion.png",
+  "icon": "assets/morefirework/icon_bomb.png",
 
   "environment": "*",
   "entrypoints": {
