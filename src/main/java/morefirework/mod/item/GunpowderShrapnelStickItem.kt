@@ -85,7 +85,7 @@ class GunpowderShrapnelStickItem : Item {
 
             var nbt = NbtCompound()
             nbt.putInt("fuse", 75)
-            nbt.putInt("shrapnel", 64)
+            nbt.putInt("shrapnel", 128)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
