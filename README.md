@@ -14,6 +14,7 @@ You must have these dependencies installed.
 
 - [Fabric Language Kotlin](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin) >=1.9.3+kotlin.1.8.20 for 1.19.2
 - [Nbt Crafting](https://modrinth.com/mod/nbt-crafting) >=2.2.3 for 1.19.2
+- [Fabric Api](https://modrinth.com/mod/fabric-api) * for 1.19.2
 
 # Credits
 [Siphalor](https://modrinth.com/user/Siphalor) - Nbt Crafting
