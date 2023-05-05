@@ -23,6 +23,7 @@ You must have these dependencies installed.
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
+  Right click to throw this and all other bomb items.
 
 ### Gunpowder Shrapnel Bomb:
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
@@ -38,12 +39,20 @@ You must have these dependencies installed.
   Bigger incendiary bomb with a wider range and more fire projectiles.
 
 ### Beeswax Fire Starter:
-  Throws fire projectiles in the direction used.
+  When right clicked throws fire projectiles in the direction used.
   Has a durability of 64 like flint and steel.
   
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
+
+  To load it hold a shot item (iron shot or copper shot) in your offhand and right click.
+  Then hold gunpowder in your offhand
+  and right click to add (max of 4).
+  Once you have loaded the gunpowder
+  hold a ramrod in your offhand and right click.
+  It should say Ready to Shoot, right click to shoot.
+  To view its stats hold in your offhand and right click.
 
 ### Iron shot
   Used to load musket or to craft shrapnel bomb.
@@ -86,29 +95,6 @@ You must have these dependencies installed.
   Obtained by blasting coal itself.
   4 of it will make a sulfur chunk.
 
-# Item Mechanics
-
-#### Bomb Mechanics for
- - Gunpowder Bomb
- - Gunpowder Pack
- - Gunpowder Shrapnel Bomb
- - Incendiary Bomb
- - Incendiary Pack
-<br>
-
-Right click to throw these and it will start the fuse countdown.
-
-  #### Short Musket Mechanics:
-  Hold a shot item (iron shot, copper shot) in your offhand and right click.
-  Then hold gunpowder in your offhand
-  and right click to add (max of 4).
-  Once you have loaded the gunpowder
-  hold a ramrod in your offhand and right click.
-  It should say Ready to Shoot, right click to shoot.
-  
-  It does have a durability of 256 but it does not show.
-  When it reaches 0 it will remove from your inventory
-
 # Recipes
 
 List of different recipes in the mod.
@@ -143,6 +129,13 @@ Incendiary Bomb:
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
+
+Incendiary Pack: 
+  - Fuse: extends length of fuse by 5 ticks.
+  - Shears (Wont get consumed): removes 5 ticks from fuse.
+  - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
 
 # Planned Features
 
