@@ -31,7 +31,10 @@ You must have these dependencies installed.
 
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
-  
+
+### Iron Gunpowder Bomb
+  A little less powerful gunpowder pack that has the same power of TNT.
+
 ### Incendiary Bomb:
   A fire bomb that flings fire projectiles everywhere that land and create fire.
 
@@ -70,40 +73,13 @@ You must have these dependencies installed.
 ### Copper Musket Cartridge
   Lesser iron musket cartridge.
 
-### Ash
-  Used to make ash and water bucket.
-
-### Ash and Water Bucket
-  Can be cooked in furnace to get potash.
-  Will leave empty bucket when crafted and
-  get consumed when cooked.
-
-### Potash
-  Part of crafting gunpowder.
-  Can be blasted to make powdered potassium
-  
-### Potassium stuff
-  Useless material right now.
-  - Block: will explode in the rain and snow.
-  - Ingot
-  - Powder
-
-### Sulfur chunk
-  Part of crafting gunpowder.
-  
-### Powdered Sulfur
-  Obtained by blasting coal itself.
-  4 of it will make a sulfur chunk.
-
 # Recipes
-
-List of different recipes in the mod.
 
 ## Item Recipes
 use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see fireworks table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
-Used to upgrade or change explosives.
+The fireworks table is used to upgrade or change explosives.
 Hold the item you want to change in your main hand
 and hold the item that will be used to change it in your offhand
 and right click.
