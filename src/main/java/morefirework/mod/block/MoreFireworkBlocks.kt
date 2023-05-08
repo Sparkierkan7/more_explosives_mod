@@ -13,5 +13,6 @@ object MoreFireworkBlocks {
     val SULFUR_BLOCK: SulfurBlock = SulfurBlock(FabricBlockSettings.of(Material.STONE).strength(2f).sounds(BlockSoundGroup.TUFF))
 
     val FIREWORK_STATION_BLOCK: FireworkStationBlock = FireworkStationBlock(FabricBlockSettings.of(Material.WOOD).strength(2.75f).sounds(BlockSoundGroup.WOOD))
+    val GUNPOWDER_BARREL_BLOCK: GunpowderBarrelBlock = GunpowderBarrelBlock(FabricBlockSettings.of(Material.WOOD).strength(2.75f).sounds(BlockSoundGroup.WOOD))
 
 }

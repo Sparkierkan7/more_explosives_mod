@@ -2,6 +2,7 @@
 
   "item.morefirework.firecracker": "Firecracker",
   "item.morefirework.gunpowder_bomb": "Gunpowder Bomb",
+  "item.morefirework.iron_gunpowder_bomb": "Iron Gunpowder Bomb",
   "item.morefirework.incendiary_bomb": "Incendiary Bomb",
   "item.morefirework.gunpowder_pack": "Gunpowder Pack",
   "item.morefirework.incendiary_pack": "Incendiary Pack",
@@ -30,6 +31,7 @@
   "block.morefirework.potassium_block": "Block of Potassium",
   "block.morefirework.sulfur_block": "Block of Sulfur",
   "block.morefirework.sulfur_ore": "Sulfur Ore",
-  "block.morefirework.firework_station": "Fireworks Table"
+  "block.morefirework.firework_station": "Fireworks Table",
+  "block.morefirework.gunpowder_barrel": "Barrel of Gunpowder"
 
 }

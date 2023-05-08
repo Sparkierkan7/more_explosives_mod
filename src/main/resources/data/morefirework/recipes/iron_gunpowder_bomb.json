@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FI ",
+    "IGG",
+    " GG"
+  ],
+  "key": {
+
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:gunpowder"
+    },
+    "F": {
+      "item": "morefirework:fuse"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:iron_gunpowder_bomb",
+    "count": 1
+
+  }
+}

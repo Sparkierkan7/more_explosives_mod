@@ -8,6 +8,7 @@ object MorefireworkItems {
 
     val FIRECRACKER_ITEM = FirecrackerItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val GUNPOWDER_BOMB_ITEM = GunpowderBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
+    val IRON_GUNPOWDER_BOMB_ITEM = IronGunpowderBomb(FabricItemSettings().maxCount(8).group(ItemGroup.MISC))
     val GUNPOWDER_SHRAPNEL_STICK_ITEM = GunpowderShrapnelStickItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val GUNPOWDER_PACK_ITEM = GunpowderPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val INCENDIARY_PACK_ITEM = IncendiaryPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))

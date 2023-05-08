@@ -1,10 +1,13 @@
 package morefirework.mod
 
 import morefirework.mod.block.MoreFireworkBlocks.FIREWORK_STATION_BLOCK
+import morefirework.mod.block.MoreFireworkBlocks.GUNPOWDER_BARREL_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.LEAD_ORE_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.POTASSIUM_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.SULFUR_BLOCK
 import morefirework.mod.block.MoreFireworkBlocks.SULFUR_ORE_BLOCK
+import morefirework.mod.block.entity.GunpowderBarrelBlockEntity
+import morefirework.mod.entity.GunpowderBarrelEntity
 import morefirework.mod.entity.projectile.*
 import morefirework.mod.item.MorefireworkItems.ASH_ITEM
 import morefirework.mod.item.MorefireworkItems.BEESWAX_FIRE_STARTER_ITEM
@@ -20,6 +23,7 @@ import morefirework.mod.item.MorefireworkItems.GUNPOWDER_PACK_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_SHRAPNEL_STICK_ITEM
 import morefirework.mod.item.MorefireworkItems.INCENDIARY_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.INCENDIARY_PACK_ITEM
+import morefirework.mod.item.MorefireworkItems.IRON_GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.IRON_MUSKET_CARTRIDGE_ITEM
 import morefirework.mod.item.MorefireworkItems.IRON_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.LEAD_INGOT_ITEM
@@ -34,12 +38,17 @@ import morefirework.mod.item.MorefireworkItems.SULFUR_CHUNK_ITEM
 import morefirework.mod.item.MorefireworkItems.WATER_ASH_SOLUTION_BUCKET_ITEM
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.fabricmc.fabric.api.`object`.builder.v1.block.entity.FabricBlockEntityTypeBuilder
+import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricDefaultAttributeRegistry
 import net.fabricmc.fabric.api.`object`.builder.v1.entity.FabricEntityTypeBuilder
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry
 import net.minecraft.block.Block
+import net.minecraft.block.entity.BlockEntityType
 import net.minecraft.entity.EntityDimensions
 import net.minecraft.entity.EntityType
+import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.SpawnGroup
+import net.minecraft.entity.attribute.EntityAttributes
 import net.minecraft.item.BlockItem
 import net.minecraft.item.ItemGroup
 import net.minecraft.util.Identifier
@@ -71,6 +80,15 @@ class MorefireworkMod : ModInitializer {
             Registry.ENTITY_TYPE,
             Identifier(modid, "gunpowder_bomb_projectile"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::GunpowderBombProjectile)
+                .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+                .trackRangeBlocks(128).trackedUpdateRate(10)
+                .build()
+        )
+
+        val IronGunpowderBombEntityType: EntityType<IronGunpowderBombProjectile> = Registry.register<EntityType<*>, EntityType<IronGunpowderBombProjectile>>(
+            Registry.ENTITY_TYPE,
+            Identifier(modid, "iron_gunpowder_bomb_projectile"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::IronGunpowderBombProjectile)
                 .dimensions(EntityDimensions.changing(0.5f, 0.5f))
                 .trackRangeBlocks(128).trackedUpdateRate(10)
                 .build()
@@ -139,28 +157,28 @@ class MorefireworkMod : ModInitializer {
                 .build()
         )
 
-        /*public fun itemTooltipCallback() {
+        //block entities
+        val GUNPOWDER_BARREL_BLOCK_ENTITY: BlockEntityType<GunpowderBarrelBlockEntity> = //useless
+            Registry.register(
+                Registry.BLOCK_ENTITY_TYPE,
+                Identifier(modid, "gunpowder_barrel_block_entity"),
+                FabricBlockEntityTypeBuilder.create(::GunpowderBarrelBlockEntity, GUNPOWDER_BARREL_BLOCK).build()
+        )
 
-            ItemTooltipCallback.EVENT.register(ItemTooltipCallback { stack: ItemStack, context: TooltipContext?, lines: MutableList<Text?> ->
-                if (stack.item === GUNPOWDER_SHRAPNEL_STICK_ITEM) {
-                    val nbtData = stack.nbt
-                    if (nbtData != null) {
-
-                        lines.clear()
-
-                        lines.add(Text.translatable("§cFuse: ${stack?.nbt?.getInt("fuse")}"));
-                        lines.add(Text.translatable("§6Shrapnel Count: ${stack?.nbt?.getInt("shrapnel")}"));
-                        lines.add(Text.translatable("§dLight on Impact: ${stack?.nbt?.getBoolean("light_on_impact")}"))
-
-                    }
-                }
-            })
-
-        }*/
+        //entity
+        val GUNPOWDER_BARREL: EntityType<GunpowderBarrelEntity> = Registry.register(
+            Registry.ENTITY_TYPE,
+            Identifier("morefirework", "gunpowder_barrel"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, ::GunpowderBarrelEntity)
+                .dimensions(EntityDimensions.fixed(1f, 1f)).build()
+        )
 
     }
 
     override fun onInitialize() {
+
+        //entity
+        FabricDefaultAttributeRegistry.register(GUNPOWDER_BARREL, LivingEntity.createLivingAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0).add(EntityAttributes.GENERIC_FOLLOW_RANGE, 0.0))
 
         //items
         Registry.register(Registry.ITEM, Identifier("morefirework", "firecracker"), FIRECRACKER_ITEM)
@@ -169,6 +187,7 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_pack"), INCENDIARY_PACK_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "iron_gunpowder_bomb"), IRON_GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_shot"), IRON_SHOT_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "copper_shot"), COPPER_SHOT_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_musket_cartridge"), IRON_MUSKET_CARTRIDGE_ITEM)
@@ -203,6 +222,7 @@ class MorefireworkMod : ModInitializer {
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "sulfur_block"), SULFUR_BLOCK)
 
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "firework_station"), FIREWORK_STATION_BLOCK)
+        Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "gunpowder_barrel"), GUNPOWDER_BARREL_BLOCK)
 
         //flammable blocks
         FlammableBlockRegistry.getDefaultInstance().add(POTASSIUM_BLOCK, 400, 450)
@@ -231,6 +251,12 @@ class MorefireworkMod : ModInitializer {
             Registry.ITEM,
             Identifier(modid, "firework_station_block"),
             BlockItem(FIREWORK_STATION_BLOCK, FabricItemSettings().group(ItemGroup.DECORATIONS))
+        )
+
+        Registry.register(
+            Registry.ITEM,
+            Identifier(modid, "gunpowder_barrel"),
+            BlockItem(GUNPOWDER_BARREL_BLOCK, FabricItemSettings())
         )
 
     }

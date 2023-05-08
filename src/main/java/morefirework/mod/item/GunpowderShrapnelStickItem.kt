@@ -62,8 +62,8 @@ class GunpowderShrapnelStickItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putInt("fuse", 75)
-            nbt.putInt("shrapnel", 64)
+            nbt.putInt("fuse", 60)
+            nbt.putInt("shrapnel", 128)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -84,7 +84,7 @@ class GunpowderShrapnelStickItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putInt("fuse", 75)
+            nbt.putInt("fuse", 60)
             nbt.putInt("shrapnel", 128)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)

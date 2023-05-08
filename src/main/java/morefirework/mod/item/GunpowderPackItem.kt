@@ -63,7 +63,7 @@ class GunpowderPackItem : Item {
 
             var nbt = NbtCompound()
             nbt.putFloat("power", 5f)
-            nbt.putInt("fuse", 150)
+            nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 

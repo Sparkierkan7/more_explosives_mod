@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "up": "morefirework:block/gunpowder_barrel_top",
+    "down": "morefirework:block/gunpowder_barrel_plain",
+    "north": "morefirework:block/gunpowder_barrel_side",
+    "east": "morefirework:block/gunpowder_barrel_side",
+    "south": "morefirework:block/gunpowder_barrel_side",
+    "west": "morefirework:block/gunpowder_barrel_side"
+  }
+}
