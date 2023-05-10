@@ -183,11 +183,11 @@ class MorefireworkMod : ModInitializer {
         //items
         Registry.register(Registry.ITEM, Identifier("morefirework", "firecracker"), FIRECRACKER_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_bomb"), GUNPOWDER_BOMB_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "iron_gunpowder_bomb"), IRON_GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_bomb"), INCENDIARY_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_pack"), INCENDIARY_PACK_ITEM)
-        Registry.register(Registry.ITEM, Identifier("morefirework", "iron_gunpowder_bomb"), IRON_GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_shot"), IRON_SHOT_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "copper_shot"), COPPER_SHOT_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_musket_cartridge"), IRON_MUSKET_CARTRIDGE_ITEM)

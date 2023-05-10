@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "morefirework:item/iron_gunpowder_bomb_brown"
+    "layer0": "morefirework:item/iron_gunpowder_bomb"
   }
 }
