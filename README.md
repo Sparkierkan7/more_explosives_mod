@@ -23,6 +23,7 @@ You must have these dependencies installed.
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
+  Right click to throw this and all other bomb items.
 
 ### Gunpowder Shrapnel Bomb:
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
@@ -30,7 +31,10 @@ You must have these dependencies installed.
 
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
-  
+
+### Iron Gunpowder Bomb
+  A little less powerful gunpowder pack that has the same power of TNT.
+
 ### Incendiary Bomb:
   A fire bomb that flings fire projectiles everywhere that land and create fire.
 
@@ -38,12 +42,20 @@ You must have these dependencies installed.
   Bigger incendiary bomb with a wider range and more fire projectiles.
 
 ### Beeswax Fire Starter:
-  Throws fire projectiles in the direction used.
+  When right clicked throws fire projectiles in the direction used.
   Has a durability of 64 like flint and steel.
   
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
+
+  To load it hold a shot item (iron shot or copper shot) in your offhand and right click.
+  Then hold gunpowder in your offhand
+  and right click to add (max of 4).
+  Once you have loaded the gunpowder
+  hold a ramrod in your offhand and right click.
+  It should say Ready to Shoot, right click to shoot.
+  To view its stats hold in your offhand and right click.
 
 ### Iron shot
   Used to load musket or to craft shrapnel bomb.
@@ -61,63 +73,13 @@ You must have these dependencies installed.
 ### Copper Musket Cartridge
   Lesser iron musket cartridge.
 
-### Ash
-  Used to make ash and water bucket.
-
-### Ash and Water Bucket
-  Can be cooked in furnace to get potash.
-  Will leave empty bucket when crafted and
-  get consumed when cooked.
-
-### Potash
-  Part of crafting gunpowder.
-  Can be blasted to make powdered potassium
-  
-### Potassium stuff
-  Useless material right now.
-  - Block: will explode in the rain and snow.
-  - Ingot
-  - Powder
-
-### Sulfur chunk
-  Part of crafting gunpowder.
-  
-### Powdered Sulfur
-  Obtained by blasting coal itself.
-  4 of it will make a sulfur chunk.
-
-# Item Mechanics
-
-#### Bomb Mechanics for
- - Gunpowder Bomb
- - Gunpowder Pack
- - Gunpowder Shrapnel Bomb
- - Incendiary Bomb
- - Incendiary Pack
-<br>
-
-Right click to throw these and it will start the fuse countdown.
-
-  #### Short Musket Mechanics:
-  Hold a shot item (iron shot, copper shot) in your offhand and right click.
-  Then hold gunpowder in your offhand
-  and right click to add (max of 4).
-  Once you have loaded the gunpowder
-  hold a ramrod in your offhand and right click.
-  It should say Ready to Shoot, right click to shoot.
-  
-  It does have a durability of 256 but it does not show.
-  When it reaches 0 it will remove from your inventory
-
 # Recipes
-
-List of different recipes in the mod.
 
 ## Item Recipes
 use [Roughly Enough Items](https://www.curseforge.com/minecraft/mc-mods/roughly-enough-items) which lets you see items and their recipes easier. Currently you can't see fireworks table recipes using roughly enough items.
 
 ## Fireworks Table Recipes
-Used to upgrade or change explosives.
+The fireworks table is used to upgrade or change explosives.
 Hold the item you want to change in your main hand
 and hold the item that will be used to change it in your offhand
 and right click.
@@ -143,6 +105,13 @@ Incendiary Bomb:
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
+
+Incendiary Pack: 
+  - Fuse: extends length of fuse by 5 ticks.
+  - Shears (Wont get consumed): removes 5 ticks from fuse.
+  - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
 
 # Planned Features
 
