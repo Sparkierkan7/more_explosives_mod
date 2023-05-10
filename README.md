@@ -33,7 +33,7 @@ You must have these dependencies installed.
   Basically a big gunpowder bomb that has a much bigger explosion power.
 
 ### Iron Gunpowder Bomb
-  A little less powerful gunpowder pack that has the same power of TNT.
+  A bomb that is a little less powerful than a gunpowder pack and has the same power of TNT.
 
 ### Incendiary Bomb:
   A fire bomb that flings fire projectiles everywhere that land and create fire.
