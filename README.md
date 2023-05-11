@@ -32,7 +32,7 @@ You must have these dependencies installed.
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
 
-### Iron Gunpowder Bomb
+### Cast Iron Gunpowder Bomb
   A bomb that is a little less powerful than a gunpowder pack and has the same power of TNT.
 
 ### Incendiary Bomb:
