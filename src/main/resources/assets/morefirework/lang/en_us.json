@@ -2,7 +2,7 @@
 
   "item.morefirework.firecracker": "Firecracker",
   "item.morefirework.gunpowder_bomb": "Gunpowder Bomb",
-  "item.morefirework.iron_gunpowder_bomb": "Iron Gunpowder Bomb",
+  "item.morefirework.cast_iron_gunpowder_bomb": "Cast Iron Gunpowder Bomb",
   "item.morefirework.incendiary_bomb": "Incendiary Bomb",
   "item.morefirework.gunpowder_pack": "Gunpowder Pack",
   "item.morefirework.incendiary_pack": "Incendiary Pack",
@@ -27,6 +27,8 @@
   "item.morefirework.sulfur_chunk": "Sulfur Chunk",
   "item.morefirework.powdered_sulfur": "Powdered Sulfur",
   "item.morefirework.dense_paper": "Dense Paper",
+
+  "item.morefirework.test": "Test",
 
   "block.morefirework.potassium_block": "Block of Potassium",
   "block.morefirework.sulfur_block": "Block of Sulfur",

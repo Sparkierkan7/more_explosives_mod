@@ -11,6 +11,7 @@ import morefirework.mod.entity.GunpowderBarrelEntity
 import morefirework.mod.entity.projectile.*
 import morefirework.mod.item.MorefireworkItems.ASH_ITEM
 import morefirework.mod.item.MorefireworkItems.BEESWAX_FIRE_STARTER_ITEM
+import morefirework.mod.item.MorefireworkItems.CAST_IRON_GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.DENSE_PAPER_ITEM
@@ -23,7 +24,6 @@ import morefirework.mod.item.MorefireworkItems.GUNPOWDER_PACK_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_SHRAPNEL_STICK_ITEM
 import morefirework.mod.item.MorefireworkItems.INCENDIARY_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.INCENDIARY_PACK_ITEM
-import morefirework.mod.item.MorefireworkItems.IRON_GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.IRON_MUSKET_CARTRIDGE_ITEM
 import morefirework.mod.item.MorefireworkItems.IRON_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.LEAD_INGOT_ITEM
@@ -35,6 +35,7 @@ import morefirework.mod.item.MorefireworkItems.PURE_POTASH_ITEM
 import morefirework.mod.item.MorefireworkItems.RAW_LEAD_ITEM
 import morefirework.mod.item.MorefireworkItems.SHORT_MUSKET_ITEM
 import morefirework.mod.item.MorefireworkItems.SULFUR_CHUNK_ITEM
+import morefirework.mod.item.MorefireworkItems.TEST_ITEM
 import morefirework.mod.item.MorefireworkItems.WATER_ASH_SOLUTION_BUCKET_ITEM
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -183,7 +184,7 @@ class MorefireworkMod : ModInitializer {
         //items
         Registry.register(Registry.ITEM, Identifier("morefirework", "firecracker"), FIRECRACKER_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_bomb"), GUNPOWDER_BOMB_ITEM)
-        Registry.register(Registry.ITEM, Identifier("morefirework", "iron_gunpowder_bomb"), IRON_GUNPOWDER_BOMB_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "cast_iron_gunpowder_bomb"), CAST_IRON_GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_bomb"), INCENDIARY_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)
@@ -212,7 +213,7 @@ class MorefireworkMod : ModInitializer {
 
         //icon items
         Registry.register(Registry.ITEM, Identifier("morefirework", "fire"), FIRE_ITEM)
-
+        Registry.register(Registry.ITEM, Identifier("morefirework", "test"), TEST_ITEM)
 
         //blocks
         Registry.register<Block, Block>(Registry.BLOCK, Identifier(modid, "lead_ore"), LEAD_ORE_BLOCK)

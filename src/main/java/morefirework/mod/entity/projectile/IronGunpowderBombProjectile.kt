@@ -2,7 +2,7 @@ package morefirework.mod.entity.projectile
 
 import morefirework.mod.MorefireworkMod.Companion.IronGunpowderBombEntityType
 import morefirework.mod.MorefireworkMod.Companion.LOGGER
-import morefirework.mod.item.MorefireworkItems.IRON_GUNPOWDER_BOMB_ITEM
+import morefirework.mod.item.MorefireworkItems.CAST_IRON_GUNPOWDER_BOMB_ITEM
 import net.minecraft.entity.EntityType
 import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity
@@ -59,7 +59,7 @@ class IronGunpowderBombProjectile : ThrownItemEntity {
 
     override fun getDefaultItem(): Item? {
 
-        return IRON_GUNPOWDER_BOMB_ITEM
+        return CAST_IRON_GUNPOWDER_BOMB_ITEM
 
     }
 

@@ -14,7 +14,7 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-class IronGunpowderBomb : Item {
+class CastIronGunpowderBombItem : Item {
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
