@@ -20,6 +20,7 @@ import morefirework.mod.item.MorefireworkItems.FIRE_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRE_PASTE_ITEM
 import morefirework.mod.item.MorefireworkItems.FUSE_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_BOMB_ITEM
+import morefirework.mod.item.MorefireworkItems.GUNPOWDER_DEPTH_CHARGE_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_PACK_ITEM
 import morefirework.mod.item.MorefireworkItems.GUNPOWDER_SHRAPNEL_STICK_ITEM
 import morefirework.mod.item.MorefireworkItems.INCENDIARY_BOMB_ITEM
@@ -90,6 +91,15 @@ class MorefireworkMod : ModInitializer {
             Registry.ENTITY_TYPE,
             Identifier(modid, "iron_gunpowder_bomb_projectile"),
             FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::IronGunpowderBombProjectile)
+                .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+                .trackRangeBlocks(128).trackedUpdateRate(10)
+                .build()
+        )
+
+        val GunpowderDepthChargeEntityType: EntityType<GunpowderDepthChargeProjectile> = Registry.register<EntityType<*>, EntityType<GunpowderDepthChargeProjectile>>(
+            Registry.ENTITY_TYPE,
+            Identifier(modid, "gunpowder_depth_charge_projectile"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::GunpowderDepthChargeProjectile)
                 .dimensions(EntityDimensions.changing(0.5f, 0.5f))
                 .trackRangeBlocks(128).trackedUpdateRate(10)
                 .build()
@@ -185,6 +195,7 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "firecracker"), FIRECRACKER_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_bomb"), GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "cast_iron_gunpowder_bomb"), CAST_IRON_GUNPOWDER_BOMB_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_depth_charge"), GUNPOWDER_DEPTH_CHARGE_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_bomb"), INCENDIARY_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)

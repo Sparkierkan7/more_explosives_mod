@@ -50,7 +50,12 @@ class GunpowderBombItem : Item {
 
             world?.spawnEntity(entity)
 
-            user.itemCooldownManager[this] = 20
+            if (!user.isCreative) {
+
+                user.itemCooldownManager[this] = 20
+
+
+            }
 
         } else if (hand == Hand.OFF_HAND) {
 
@@ -69,7 +74,7 @@ class GunpowderBombItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 2f)
+            nbt.putFloat("power", 2.5f)
             nbt.putInt("fuse", 60)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
@@ -92,7 +97,7 @@ class GunpowderBombItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 2f)
+            nbt.putFloat("power", 2.5f)
             nbt.putInt("fuse", 60)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
@@ -222,12 +227,12 @@ class GunpowderBombItem : Item {
 
                     if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
 
-                        if (mainStack.nbt!!.getFloat("power") < 4.0f) {
+                        if (mainStack.nbt!!.getFloat("power") < 4.5f) {
 
                             if (offStack.count >= mainStack.count) {
 
                                 val power = mainStack.nbt!!.getFloat("power")
-                                mainStack.nbt!!.putFloat("power", (power + 0.25f))
+                                mainStack.nbt!!.putFloat("power", (power + 0.5f))
 
                                 val newStack = ItemStack(mainStack.item, mainStack.count)
                                 newStack.setNbt(mainStack.nbt)

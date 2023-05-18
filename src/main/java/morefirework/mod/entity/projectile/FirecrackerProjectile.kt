@@ -54,7 +54,11 @@ class FirecrackerProjectile : ThrownItemEntity {
 
     override fun onCollision(hitResult: HitResult?) {
 
-        world.createExplosion(this, this.x, this.y, this.z, this.power, DestructionType.BREAK)
+        if (!world.isClient) {
+
+            world.createExplosion(this, this.x, this.y, this.z, this.power, DestructionType.BREAK)
+
+        }
 
         world.sendEntityStatus(this, 3.toByte())
         kill()

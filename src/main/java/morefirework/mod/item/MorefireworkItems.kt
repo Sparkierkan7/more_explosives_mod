@@ -9,6 +9,7 @@ object MorefireworkItems {
     val FIRECRACKER_ITEM = FirecrackerItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val GUNPOWDER_BOMB_ITEM = GunpowderBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val CAST_IRON_GUNPOWDER_BOMB_ITEM = CastIronGunpowderBombItem(FabricItemSettings().maxCount(8).group(ItemGroup.MISC))
+    val GUNPOWDER_DEPTH_CHARGE_ITEM = GunpowderDepthChargeItem(FabricItemSettings().maxCount(8).group(ItemGroup.MISC))
     val GUNPOWDER_SHRAPNEL_STICK_ITEM = GunpowderShrapnelStickItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
     val GUNPOWDER_PACK_ITEM = GunpowderPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val INCENDIARY_PACK_ITEM = IncendiaryPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
@@ -24,8 +25,8 @@ object MorefireworkItems {
     val COPPER_MUSKET_CARTRIDGE_ITEM = CopperMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
     val FUSE_ITEM = FuseItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
-    val RAW_LEAD_ITEM = RawLeadItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
-    val LEAD_INGOT_ITEM = LeadIngotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val RAW_LEAD_ITEM = RawLeadItem(FabricItemSettings().maxCount(64))
+    val LEAD_INGOT_ITEM = LeadIngotItem(FabricItemSettings().maxCount(64))
     val POTASSIUM_INGOT_ITEM = PotassiumIngotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val POTASSIUM_POWDER_ITEM = PotassiumPowderItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val PURE_POTASH_ITEM = PurePotashItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
@@ -37,6 +38,6 @@ object MorefireworkItems {
 
 
     val FIRE_ITEM = FireItem(FabricItemSettings().maxCount(64))
-    val TEST_ITEM = TestItem(FabricItemSettings().maxCount(8).group(ItemGroup.MISC))
+    val TEST_ITEM = TestItem(FabricItemSettings().maxCount(8))
 
 }

@@ -49,7 +49,11 @@ class GunpowderPackItem : Item {
 
             world?.spawnEntity(entity)
 
-            user.itemCooldownManager[this] = 40
+            if (!user.isCreative) {
+
+                user.itemCooldownManager[this] = 40
+
+            }
 
         }
 
@@ -62,7 +66,7 @@ class GunpowderPackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 5f)
+            nbt.putFloat("power", 5.5f)
             nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
@@ -84,7 +88,7 @@ class GunpowderPackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 5f)
+            nbt.putFloat("power", 5.5f)
             nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
@@ -210,7 +214,7 @@ class GunpowderPackItem : Item {
 
                     if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
 
-                        if (mainStack.nbt!!.getFloat("power") < 7.0f) {
+                        if (mainStack.nbt!!.getFloat("power") < 7.5f) {
 
                             if (offStack.count >= mainStack.count) {
 

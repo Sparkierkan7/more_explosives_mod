@@ -1,7 +1,7 @@
 package morefirework.mod.item
 
 import morefirework.mod.MorefireworkMod.Companion.LOGGER
-import morefirework.mod.entity.projectile.IronGunpowderBombProjectile
+import morefirework.mod.entity.projectile.GunpowderDepthChargeProjectile
 import morefirework.mod.util.Math.setShootVelocity
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
@@ -14,7 +14,7 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-class CastIronGunpowderBombItem : Item {
+class GunpowderDepthChargeItem : Item {
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
@@ -40,7 +40,7 @@ class CastIronGunpowderBombItem : Item {
             var stack = user?.getStackInHand(hand)
 
             var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 1.0)
-            var entity = IronGunpowderBombProjectile(world, user as LivingEntity, stack)
+            var entity = GunpowderDepthChargeProjectile(world, user as LivingEntity, stack)
             entity.setVelocity(shot)
 
             world?.spawnEntity(entity)
@@ -48,6 +48,7 @@ class CastIronGunpowderBombItem : Item {
             if (!user.isCreative) {
 
                 user.itemCooldownManager[this] = 20
+
 
             }
 

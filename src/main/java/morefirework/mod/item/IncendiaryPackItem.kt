@@ -49,7 +49,12 @@ class IncendiaryPackItem : Item {
 
             world?.spawnEntity(entity)
 
-            user.itemCooldownManager[this] = 40
+            if (!user.isCreative) {
+
+                user.itemCooldownManager[this] = 40
+
+
+            }
 
         }
 

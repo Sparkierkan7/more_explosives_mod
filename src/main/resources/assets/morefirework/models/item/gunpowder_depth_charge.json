@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "morefirework:item/cast_iron_gunpowder_bomb_e"
+    "layer0": "morefirework:item/gunpowder_depth_charge_3"
   }
 }
 

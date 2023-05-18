@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CBC",
+    "CCC"
+  ],
+  "key": {
+
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "B": {
+      "item": "morefirework:cast_iron_gunpowder_bomb"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:gunpowder_depth_charge",
+    "count": 1
+
+  }
+}
