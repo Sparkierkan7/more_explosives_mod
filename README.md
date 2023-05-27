@@ -20,6 +20,7 @@ You must have these dependencies installed.
 [Siphalor](https://modrinth.com/user/Siphalor) - Nbt Crafting
 
 # Items
+![Items](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/e36a69d9295da65e92b7a927a0b6132bc3c98acf.png)
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
@@ -83,6 +84,8 @@ The fireworks table is used to upgrade or change explosives.
 Hold the item you want to change in your main hand
 and hold the item that will be used to change it in your offhand
 and right click.
+
+![Fireworks Table](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/eee1834e3e1732ed9f47912673252ed9dc5b29a5.png)
 
 Gunpowder Bomb: 
   - Fuse: extends length of fuse by 5 ticks.
