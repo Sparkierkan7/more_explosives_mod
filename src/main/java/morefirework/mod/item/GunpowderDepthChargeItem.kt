@@ -1,6 +1,7 @@
 package morefirework.mod.item
 
 import morefirework.mod.MorefireworkMod.Companion.LOGGER
+import morefirework.mod.block.MoreFireworkBlocks
 import morefirework.mod.entity.projectile.GunpowderDepthChargeProjectile
 import morefirework.mod.util.Math.setShootVelocity
 import net.minecraft.client.item.TooltipContext
@@ -8,8 +9,12 @@ import net.minecraft.entity.LivingEntity
 import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
+import net.minecraft.item.ItemUsageContext
+import net.minecraft.item.Items
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.text.Text
+import net.minecraft.util.ActionResult
+import net.minecraft.util.Formatting
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
@@ -103,5 +108,153 @@ class GunpowderDepthChargeItem : Item {
 
         super.appendTooltip(stack, world, tooltip, context)
     }
+
+    override fun useOnBlock(context: ItemUsageContext?): ActionResult {
+
+        var world = context!!.world
+        var player = context.player
+
+        if (world.getBlockState(context.blockPos) == MoreFireworkBlocks.FIREWORK_STATION_BLOCK.defaultState) {
+
+            var mainStack = player!!.inventory.mainHandStack
+            var offStack = player.offHandStack
+
+            if (context.hand == Hand.MAIN_HAND) {
+
+                if (mainStack.item == ItemStack(MorefireworkItems.GUNPOWDER_DEPTH_CHARGE_ITEM).item) {
+
+                    mainStack.nbt!!.putBoolean("tooltip_nbt", false)
+
+                    if (offStack.item == ItemStack(Items.REDSTONE).item) {
+
+                        if (mainStack.nbt!!.getInt("fuse") >= 20) {
+
+                            if (offStack.count >= mainStack.count) {
+
+                                mainStack.nbt!!.putBoolean("light_on_impact", true)
+
+                                offStack.count -= mainStack.count
+
+                                val newStack = ItemStack(mainStack.item, mainStack.count)
+                                newStack.setNbt(mainStack.nbt)
+
+                                player.dropStack(newStack)
+                                mainStack.count = 0
+
+                                player.sendMessage(Text.translatable("§aAdded §dLight on Impact").formatted(Formatting.BOLD), true)
+
+                            }
+
+                        } else {
+
+                            val newStack = ItemStack(mainStack.item, mainStack.count)
+                            newStack.setNbt(mainStack.nbt)
+                            player.dropStack(newStack)
+                            mainStack.count = 0
+
+                            player.sendMessage(Text.translatable("§6Fuse must be greater than 20 ticks.").formatted(
+                                Formatting.BOLD), true)
+
+                        }
+
+                    }
+
+                    if (offStack.item == ItemStack(Items.SHEARS).item) {
+
+                        var fuse = mainStack.nbt!!.getInt("fuse")
+
+                        if (fuse > 10) {
+
+                            mainStack.nbt!!.putInt("fuse", (fuse - 5))
+
+                            if (fuse <= 20) {
+
+                                mainStack.nbt!!.putBoolean("light_on_impact", false)
+
+                            }
+
+                            val newStack = ItemStack(mainStack.item, mainStack.count)
+                            newStack.setNbt(mainStack.nbt)
+
+                            player.dropStack(newStack)
+                            mainStack.count = 0
+
+                            player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(
+                                Formatting.BOLD), true)
+
+                        } else if (fuse <= 10) {
+
+                            val newStack = ItemStack(mainStack.item, mainStack.count)
+                            newStack.setNbt(mainStack.nbt)
+
+                            player.dropStack(newStack)
+                            mainStack.count = 0
+
+                            player.sendMessage(Text.translatable("§eCannot shorten fuse anymore §c(fuse ${newStack.nbt!!.getInt("fuse")})").formatted(
+                                Formatting.BOLD), true)
+
+                        }
+
+                    }
+
+                    if (offStack.item == ItemStack(MorefireworkItems.FUSE_ITEM).item) {
+
+                        if (offStack.count >= mainStack.count) {
+
+                            var fuse = mainStack.nbt!!.getInt("fuse")
+                            mainStack.nbt!!.putInt("fuse", (fuse + 5))
+
+                            val newStack = ItemStack(mainStack.item, mainStack.count)
+                            newStack.setNbt(mainStack.nbt)
+
+                            offStack.count -= mainStack.count
+
+                            player.dropStack(newStack)
+                            mainStack.count = 0
+
+                            player.sendMessage(Text.translatable("§aAdded §65 ticks to fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(
+                                Formatting.BOLD), true)
+
+                        } else {
+
+                            val newStack = ItemStack(mainStack.item, mainStack.count)
+                            newStack.setNbt(mainStack.nbt)
+                            player.dropStack(newStack)
+                            mainStack.count = 0
+
+                            player.sendMessage(Text.translatable("§6Not enough §cFuse").formatted(Formatting.BOLD), true)
+
+                        }
+
+                    }
+
+                    if (offStack.item == ItemStack(Items.AIR).item) {
+
+                        if (world.isClient == true) {
+
+                            player.sendMessage(Text.translatable("§e-Item Information-").formatted(Formatting.BOLD), false)
+                            player.sendMessage(Text.translatable("§cFuse: ${mainStack.nbt!!.getInt("fuse")}"), false)
+                            player.sendMessage(Text.translatable("§6Shrapnel Count: ${mainStack.nbt!!.getInt("shrapnel")}"), false)
+                            player.sendMessage(Text.translatable("§dIgnite on Impact: ${mainStack.nbt!!.getBoolean("light_on_impact")}"), false)
+
+                        }
+
+                        val newStack = ItemStack(mainStack.item, mainStack.count)
+                        newStack.setNbt(mainStack.nbt)
+
+                        player.dropStack(newStack)
+                        mainStack.count = 0
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return super.useOnBlock(context)
+    }
+
 
 }

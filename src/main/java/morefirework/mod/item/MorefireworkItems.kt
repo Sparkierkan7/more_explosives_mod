@@ -25,8 +25,6 @@ object MorefireworkItems {
     val COPPER_MUSKET_CARTRIDGE_ITEM = CopperMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
     val FUSE_ITEM = FuseItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
-    val RAW_LEAD_ITEM = RawLeadItem(FabricItemSettings().maxCount(64))
-    val LEAD_INGOT_ITEM = LeadIngotItem(FabricItemSettings().maxCount(64))
     val POTASSIUM_INGOT_ITEM = PotassiumIngotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val POTASSIUM_POWDER_ITEM = PotassiumPowderItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val PURE_POTASH_ITEM = PurePotashItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
@@ -38,6 +36,5 @@ object MorefireworkItems {
 
 
     val FIRE_ITEM = FireItem(FabricItemSettings().maxCount(64))
-    val TEST_ITEM = TestItem(FabricItemSettings().maxCount(8))
 
 }
