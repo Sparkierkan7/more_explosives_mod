@@ -20,10 +20,14 @@ You must have these dependencies installed.
 [Siphalor](https://modrinth.com/user/Siphalor) - Nbt Crafting
 
 # Items
+![Items](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/e36a69d9295da65e92b7a927a0b6132bc3c98acf.png)
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
   Right click to throw this and all other bomb items.
+
+### Incendiary Bomb:
+  A fire bomb that flings fire projectiles everywhere that land and create fire.
 
 ### Gunpowder Shrapnel Bomb:
   A bomb that does not create an explosion that damages blocks. But instead shoots out tiny pieces of shrapnel at random that damage
@@ -32,19 +36,27 @@ You must have these dependencies installed.
 ### Gunpowder Pack:
   Basically a big gunpowder bomb that has a much bigger explosion power.
 
-### Cast Iron Gunpowder Bomb
-  A bomb that is a little less powerful than a gunpowder pack and has the same power of TNT.
-
-### Incendiary Bomb:
-  A fire bomb that flings fire projectiles everywhere that land and create fire.
-
 ### Incendiary Pack:
   Bigger incendiary bomb with a wider range and more fire projectiles.
 
-### Beeswax Fire Starter:
-  When right clicked throws fire projectiles in the direction used.
-  Has a durability of 64 like flint and steel.
-  
+### Cast Iron Gunpowder Bomb:
+  A bomb that is a little less powerful than a gunpowder pack and has the same power of TNT.
+
+### Gunpowder Depth Charge:
+  Bomb that explodes underwater. It has the same power of the cast iron gunpowder bomb underwater, but on land it has a power of 2.5.
+
+### Iron shot
+  Used to load musket or to craft shrapnel bomb.
+
+### Copper shot
+  Lesser version of iron shot. 
+  Cannot be used to craft shrapnel bomb.
+
+### Iron Musket Cartridge
+  Used to instantly load iron shot and gunpowder into musket.
+
+### Copper Musket Cartridge
+  Lesser iron musket cartridge.
 
 ### Short Musket:
   A gun. Can shoot different types of shot.
@@ -57,21 +69,12 @@ You must have these dependencies installed.
   It should say Ready to Shoot, right click to shoot.
   To view its stats hold in your offhand and right click.
 
-### Iron shot
-  Used to load musket or to craft shrapnel bomb.
-
-### Copper shot
-  Lesser version of iron shot. 
-  Cannot be used to craft shrapnel bomb.
-  
 ### Ramrod
   Used to prepare musket for shooting.
 
-### Iron Musket Cartridge
-  Used to instantly load iron shot and gunpowder into musket.
-
-### Copper Musket Cartridge
-  Lesser iron musket cartridge.
+### Beeswax Fire Lobber:
+  When right clicked throws fire projectiles in the direction used.
+  Has a durability of 64 like flint and steel.
 
 # Recipes
 
@@ -83,6 +86,8 @@ The fireworks table is used to upgrade or change explosives.
 Hold the item you want to change in your main hand
 and hold the item that will be used to change it in your offhand
 and right click.
+
+![Fireworks Table](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/eee1834e3e1732ed9f47912673252ed9dc5b29a5.png)
 
 Gunpowder Bomb: 
   - Fuse: extends length of fuse by 5 ticks.
@@ -101,17 +106,20 @@ Gunpowder Bomb (Shrapnel):
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
 
+Gunpowder Depth Charge: 
+  - Fuse: extends length of fuse by 5 ticks.
+  - Shears (Wont get consumed): removes 5 ticks from fuse.
+  - Redstone: makes it so the bomb will start ticking after it has hit the ground.
+
 Incendiary Bomb: 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
 
-
 Incendiary Pack: 
   - Fuse: extends length of fuse by 5 ticks.
   - Shears (Wont get consumed): removes 5 ticks from fuse.
   - Redstone: makes it so the bomb will start ticking after it has hit the ground.
-
 
 # Planned Features
 
