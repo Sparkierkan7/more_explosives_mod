@@ -8,7 +8,7 @@
   "key": {
 
     "P": {
-      "item": "morefirework:pure_potash"
+      "item": "minecraft:bone_meal"
     },
     "C": {
       "item": "minecraft:charcoal"
@@ -21,7 +21,7 @@
   "result": {
 
     "item": "minecraft:gunpowder",
-    "count": 6
+    "count": 2
 
   }
 }

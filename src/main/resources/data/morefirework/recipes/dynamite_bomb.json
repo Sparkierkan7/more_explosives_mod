@@ -2,13 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " F ",
-    "BBB",
-    "   "
+    "PDP",
+    " D "
   ],
   "key": {
 
-    "B": {
-      "item": "morefirework:gunpowder_bomb"
+    "P": {
+      "item": "morefirework:dense_paper"
+    },
+    "D": {
+      "item": "morefirework:dynamite"
     },
     "F": {
       "item": "morefirework:fuse"
@@ -17,7 +20,7 @@
   },
   "result": {
 
-    "item": "morefirework:gunpowder_pack",
+    "item": "morefirework:dynamite_bomb",
     "count": 1
 
   }

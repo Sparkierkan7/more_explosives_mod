@@ -15,6 +15,10 @@ import morefirework.mod.item.MorefireworkItems.CAST_IRON_GUNPOWDER_BOMB_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_MUSKET_CARTRIDGE_ITEM
 import morefirework.mod.item.MorefireworkItems.COPPER_SHOT_ITEM
 import morefirework.mod.item.MorefireworkItems.DENSE_PAPER_ITEM
+import morefirework.mod.item.MorefireworkItems.DYNAMITE_BOMB_ITEM
+import morefirework.mod.item.MorefireworkItems.DYNAMITE_ITEM
+import morefirework.mod.item.MorefireworkItems.DYNAMITE_PACK_ITEM
+import morefirework.mod.item.MorefireworkItems.EXPLOSIVE_MIXTURE_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRECRACKER_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRE_ITEM
 import morefirework.mod.item.MorefireworkItems.FIRE_PASTE_ITEM
@@ -138,6 +142,24 @@ class MorefireworkMod : ModInitializer {
                 .build()
         )
 
+        val DynamiteBombEntityType: EntityType<DynamiteBombProjectile> = Registry.register<EntityType<*>, EntityType<DynamiteBombProjectile>>(
+            Registry.ENTITY_TYPE,
+            Identifier(modid, "dynamite_bomb_projectile"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::DynamiteBombProjectile)
+                .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+                .trackRangeBlocks(128).trackedUpdateRate(10)
+                .build()
+        )
+
+        val DynamitePackEntityType: EntityType<DynamitePackProjectile> = Registry.register<EntityType<*>, EntityType<DynamitePackProjectile>>(
+            Registry.ENTITY_TYPE,
+            Identifier(modid, "dynamite_pack_projectile"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MISC, ::DynamitePackProjectile)
+                .dimensions(EntityDimensions.changing(0.5f, 0.5f))
+                .trackRangeBlocks(128).trackedUpdateRate(10)
+                .build()
+        )
+
         val FirePasteEntityType: EntityType<FirePasteProjectile> = Registry.register<EntityType<*>, EntityType<FirePasteProjectile>>(
             Registry.ENTITY_TYPE,
             Identifier(modid, "fire_paste_projectile"),
@@ -195,6 +217,8 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_shrapnel_stick"), GUNPOWDER_SHRAPNEL_STICK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_pack"), GUNPOWDER_PACK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "incendiary_pack"), INCENDIARY_PACK_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "dynamite_bomb"), DYNAMITE_BOMB_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "dynamite_pack"), DYNAMITE_PACK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "cast_iron_gunpowder_bomb"), CAST_IRON_GUNPOWDER_BOMB_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "gunpowder_depth_charge"), GUNPOWDER_DEPTH_CHARGE_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "iron_shot"), IRON_SHOT_ITEM)
@@ -215,6 +239,8 @@ class MorefireworkMod : ModInitializer {
         Registry.register(Registry.ITEM, Identifier("morefirework", "sulfur_chunk"), SULFUR_CHUNK_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "powdered_sulfur"), POWDERED_SULFUR_ITEM)
         Registry.register(Registry.ITEM, Identifier("morefirework", "dense_paper"), DENSE_PAPER_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "dynamite"), DYNAMITE_ITEM)
+        Registry.register(Registry.ITEM, Identifier("morefirework", "explosive_mixture"), EXPLOSIVE_MIXTURE_ITEM)
 
 
         //icon items

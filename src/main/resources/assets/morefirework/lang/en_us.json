@@ -8,6 +8,8 @@
   "item.morefirework.gunpowder_pack": "Gunpowder Pack",
   "item.morefirework.incendiary_pack": "Incendiary Pack",
   "item.morefirework.gunpowder_shrapnel_stick": "Gunpowder Bomb (Shrapnel)",
+  "item.morefirework.dynamite_bomb": "Dynamite Bomb",
+  "item.morefirework.dynamite_pack": "Dynamite Pack",
   "item.morefirework.iron_shot": "Iron Shot",
   "item.morefirework.copper_shot": "Copper Shot",
   "item.morefirework.iron_musket_cartridge": "Iron Musket Cartridge",
@@ -26,6 +28,8 @@
   "item.morefirework.sulfur_chunk": "Sulfur Chunk",
   "item.morefirework.powdered_sulfur": "Powdered Sulfur",
   "item.morefirework.dense_paper": "Dense Paper",
+  "item.morefirework.dynamite": "Dynamite Chunk",
+  "item.morefirework.explosive_mixture": "Explosive Mixture",
 
   "item.morefirework.test": "Test",
 

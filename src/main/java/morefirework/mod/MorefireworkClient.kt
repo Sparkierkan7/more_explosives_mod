@@ -1,5 +1,7 @@
 package morefirework.mod
 
+import morefirework.mod.MorefireworkMod.Companion.DynamiteBombEntityType
+import morefirework.mod.MorefireworkMod.Companion.DynamitePackEntityType
 import morefirework.mod.MorefireworkMod.Companion.FirePasteEntityType
 import morefirework.mod.MorefireworkMod.Companion.FirecrackerEntityType
 import morefirework.mod.MorefireworkMod.Companion.GunpowderBombEntityType
@@ -46,6 +48,8 @@ class MorefireworkClient : ClientModInitializer {
         EntityRendererRegistry.register(GunpowderDepthChargeEntityType, ::GunpowderDepthChargeProjectileRenderer)
         EntityRendererRegistry.register(IncendiaryBombEntityType, ::IncendiaryBombProjectileRenderer)
         EntityRendererRegistry.register(IncendiaryPackEntityType, ::IncendiaryPackProjectileRenderer)
+        EntityRendererRegistry.register(DynamiteBombEntityType, ::DynamiteBombProjectileRenderer)
+        EntityRendererRegistry.register(DynamitePackEntityType, ::DynamitePackProjectileRenderer)
         EntityRendererRegistry.register(FirePasteEntityType, ::FirePasteProjectileRenderer)
         EntityRendererRegistry.register(GunpowderPackEntityType, ::GunpowderPackProjectileRenderer)
         EntityRendererRegistry.register(GunpowderShrapnelStickEntityType, ::GunpowderShrapnelStickProjectileRenderer)

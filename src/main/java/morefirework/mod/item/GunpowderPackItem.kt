@@ -219,7 +219,7 @@ class GunpowderPackItem : Item {
                             if (offStack.count >= mainStack.count) {
 
                                 val power = mainStack.nbt!!.getFloat("power")
-                                mainStack.nbt!!.putFloat("power", (power + 0.25f))
+                                mainStack.nbt!!.putFloat("power", (power + 0.5f))
 
                                 val newStack = ItemStack(mainStack.item, mainStack.count)
                                 newStack.setNbt(mainStack.nbt)
@@ -229,7 +229,7 @@ class GunpowderPackItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§aAdded §60.25 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§aAdded §60.5 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                             } else {
 

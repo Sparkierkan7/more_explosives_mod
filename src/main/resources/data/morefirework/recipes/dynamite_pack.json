@@ -8,7 +8,7 @@
   "key": {
 
     "B": {
-      "item": "morefirework:gunpowder_bomb"
+      "item": "morefirework:dynamite_bomb"
     },
     "F": {
       "item": "morefirework:fuse"
@@ -17,7 +17,7 @@
   },
   "result": {
 
-    "item": "morefirework:gunpowder_pack",
+    "item": "morefirework:dynamite_pack",
     "count": 1
 
   }

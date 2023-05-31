@@ -14,6 +14,8 @@ object MorefireworkItems {
     val GUNPOWDER_PACK_ITEM = GunpowderPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val INCENDIARY_PACK_ITEM = IncendiaryPackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val INCENDIARY_BOMB_ITEM = IncendiaryBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
+    val DYNAMITE_BOMB_ITEM = DynamiteBombItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
+    val DYNAMITE_PACK_ITEM = DynamitePackItem(FabricItemSettings().maxCount(2).group(ItemGroup.MISC))
     val SHORT_MUSKET_ITEM = ShortMusketItem(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
     val MUSKET_RAM_ROD = MusketRamRod(FabricItemSettings().maxCount(1).group(ItemGroup.COMBAT))
     val FIRE_PASTE_ITEM = FirePasteItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
@@ -24,6 +26,8 @@ object MorefireworkItems {
     val IRON_MUSKET_CARTRIDGE_ITEM = IronMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
     val COPPER_MUSKET_CARTRIDGE_ITEM = CopperMusketCartridge(FabricItemSettings().maxCount(16).group(ItemGroup.COMBAT))
     val FUSE_ITEM = FuseItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
+    val EXPLOSIVE_MIXTURE_ITEM = ExplosiveMixtureItem(FabricItemSettings().maxCount(16).group(ItemGroup.MISC))
+    val DYNAMITE_ITEM = DynamiteItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
 
     val POTASSIUM_INGOT_ITEM = PotassiumIngotItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))
     val POTASSIUM_POWDER_ITEM = PotassiumPowderItem(FabricItemSettings().maxCount(64).group(ItemGroup.MISC))

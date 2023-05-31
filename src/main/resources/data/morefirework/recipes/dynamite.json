@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BC ",
+    "C  ",
+    "   "
+  ],
+  "key": {
+
+    "B": {
+      "item": "morefirework:explosive_mixture"
+    },
+    "C": {
+      "item": "minecraft:clay_ball"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:dynamite",
+    "count": 1
+
+  }
+}

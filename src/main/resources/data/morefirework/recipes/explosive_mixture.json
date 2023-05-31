@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CPX",
+    "WCP",
+    "GWR"
+  ],
+  "key": {
+
+    "G": {
+      "item": "minecraft:glass_bottle"
+    },
+    "W": {
+      "item": "minecraft:warped_fungus"
+    },
+    "C": {
+      "item": "minecraft:crimson_fungus"
+    },
+    "P": {
+      "item": "minecraft:blaze_powder"
+    },
+    "X": {
+      "item": "minecraft:gunpowder"
+    },
+    "R": {
+      "item": "minecraft:beetroot"
+    }
+
+  },
+  "result": {
+
+    "item": "morefirework:explosive_mixture",
+    "count": 1
+
+  }
+}

@@ -1,8 +1,8 @@
 package morefirework.mod.item
 
-import morefirework.mod.MorefireworkMod.Companion.LOGGER
 import morefirework.mod.block.MoreFireworkBlocks
-import morefirework.mod.entity.projectile.GunpowderBombProjectile
+import morefirework.mod.entity.projectile.DynamitePackProjectile
+import morefirework.mod.item.MorefireworkItems.DYNAMITE_ITEM
 import morefirework.mod.util.Math.setShootVelocity
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.LivingEntity
@@ -19,7 +19,7 @@ import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
 
-class GunpowderBombItem : Item {
+class DynamitePackItem : Item {
 
     /*fun FirecrackerItem(settings: Settings?) {
         super(settings)
@@ -44,24 +44,17 @@ class GunpowderBombItem : Item {
 
             var stack = user?.getStackInHand(hand)
 
-            var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 1.25)
-            var entity = GunpowderBombProjectile(world, user as LivingEntity, stack)
+            var shot = setShootVelocity(user!!.pitch, user.yaw, 0f, 0.75)
+            var entity = DynamitePackProjectile(world, user as LivingEntity, stack)
             entity.setVelocity(shot)
 
             world?.spawnEntity(entity)
 
             if (!user.isCreative) {
 
-                user.itemCooldownManager[this] = 20
-
+                user.itemCooldownManager[this] = 40
 
             }
-
-        } else if (hand == Hand.OFF_HAND) {
-
-            var stack = user?.getStackInHand(hand)
-
-            LOGGER.info("${stack?.nbt}")
 
         }
 
@@ -74,8 +67,8 @@ class GunpowderBombItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 2.5f)
-            nbt.putInt("fuse", 60)
+            nbt.putFloat("power", 9.0f)
+            nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -84,7 +77,6 @@ class GunpowderBombItem : Item {
         }
 
         super.onCraft(stack, world, player)
-
     }
 
     override fun appendTooltip(
@@ -97,8 +89,8 @@ class GunpowderBombItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 2.5f)
-            nbt.putInt("fuse", 60)
+            nbt.putFloat("power", 9.0f)
+            nbt.putInt("fuse", 125)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -121,7 +113,7 @@ class GunpowderBombItem : Item {
 
             if (context.hand == Hand.MAIN_HAND) {
 
-                if (mainStack.item == ItemStack(MorefireworkItems.GUNPOWDER_BOMB_ITEM).item) {
+                if (mainStack.item == ItemStack(MorefireworkItems.DYNAMITE_PACK_ITEM).item) {
 
                     mainStack.nbt!!.putBoolean("tooltip_nbt", false)
 
@@ -162,15 +154,9 @@ class GunpowderBombItem : Item {
 
                         var fuse = mainStack.nbt!!.getInt("fuse")
 
-                        if (fuse > 15) {
+                        if (fuse > 60) {
 
                             mainStack.nbt!!.putInt("fuse", (fuse - 5))
-
-                            if (fuse <= 20) {
-
-                                mainStack.nbt!!.putBoolean("light_on_impact", false)
-
-                            }
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
@@ -180,7 +166,9 @@ class GunpowderBombItem : Item {
 
                             player.sendMessage(Text.translatable("§eRemoved §65 ticks from fuse (now ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
 
-                        } else if (fuse <= 15) {
+                        } else if (fuse <= 60) {
+
+                            mainStack.nbt!!.putInt("fuse", 60)
 
                             val newStack = ItemStack(mainStack.item, mainStack.count)
                             newStack.setNbt(mainStack.nbt)
@@ -188,7 +176,7 @@ class GunpowderBombItem : Item {
                             player.dropStack(newStack)
                             mainStack.count = 0
 
-                            player.sendMessage(Text.translatable("§eCannot shorten fuse anymore §c(fuse ${newStack.nbt!!.getInt("fuse")})").formatted(Formatting.BOLD), true)
+                            player.sendMessage(Text.translatable("§6Cannot make fuse less than §c60").formatted(Formatting.BOLD), true)
 
                         }
 
@@ -225,14 +213,14 @@ class GunpowderBombItem : Item {
 
                     }
 
-                    if (offStack.item == ItemStack(Items.GUNPOWDER).item) {
+                    if (offStack.item == ItemStack(DYNAMITE_ITEM).item) {
 
-                        if (mainStack.nbt!!.getFloat("power") < 4.5f) {
+                        if (mainStack.nbt!!.getFloat("power") < 10.0f) {
 
                             if (offStack.count >= mainStack.count) {
 
                                 val power = mainStack.nbt!!.getFloat("power")
-                                mainStack.nbt!!.putFloat("power", (power + 0.5f))
+                                mainStack.nbt!!.putFloat("power", (power + 0.25f))
 
                                 val newStack = ItemStack(mainStack.item, mainStack.count)
                                 newStack.setNbt(mainStack.nbt)
@@ -242,7 +230,7 @@ class GunpowderBombItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§aAdded §60.5 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§aAdded §60.25 to power (now ${newStack.nbt!!.getFloat("power")})").formatted(Formatting.BOLD), true)
 
                             } else {
 
@@ -251,7 +239,7 @@ class GunpowderBombItem : Item {
                                 player.dropStack(newStack)
                                 mainStack.count = 0
 
-                                player.sendMessage(Text.translatable("§6Not enough §cGunpowder").formatted(Formatting.BOLD), true)
+                                player.sendMessage(Text.translatable("§6Not enough §cDynamite").formatted(Formatting.BOLD), true)
 
                             }
 
@@ -296,5 +284,6 @@ class GunpowderBombItem : Item {
 
         return super.useOnBlock(context)
     }
+
 
 }
