@@ -68,7 +68,7 @@ class IncendiaryPackItem : Item {
 
             var nbt = NbtCompound()
             nbt.putInt("shrapnel", 256)
-            nbt.putInt("fuse", 125)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -90,7 +90,7 @@ class IncendiaryPackItem : Item {
 
             var nbt = NbtCompound()
             nbt.putInt("shrapnel", 256)
-            nbt.putInt("fuse", 125)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 

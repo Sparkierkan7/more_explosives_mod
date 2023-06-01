@@ -67,8 +67,8 @@ class DynamitePackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 9.0f)
-            nbt.putInt("fuse", 125)
+            nbt.putFloat("power", 9.75f)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -89,8 +89,8 @@ class DynamitePackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 9.0f)
-            nbt.putInt("fuse", 125)
+            nbt.putFloat("power", 9.75f)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 

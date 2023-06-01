@@ -66,8 +66,8 @@ class GunpowderPackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 5.5f)
-            nbt.putInt("fuse", 125)
+            nbt.putFloat("power", 6.5f)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
@@ -88,8 +88,8 @@ class GunpowderPackItem : Item {
         if (stack?.nbt?.getBoolean("tooltip_nbt") == null || stack.nbt?.getBoolean("tooltip_nbt") == true) {
 
             var nbt = NbtCompound()
-            nbt.putFloat("power", 5.5f)
-            nbt.putInt("fuse", 125)
+            nbt.putFloat("power", 6.5f)
+            nbt.putInt("fuse", 120)
             nbt.putBoolean("light_on_impact", false)
             nbt.putBoolean("tooltip_nbt", true)
 
