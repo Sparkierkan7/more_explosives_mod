@@ -4,11 +4,11 @@ Adds stuff related to explosives like bombs and a way to craft gunpowder. If you
 
 Its focused more on old technology stuff to fit better in the game so if your looking for more modern-like stuff like missiles and modern hand grenades this is the wrong place.
 
-# License
+### License
 
 This mod is available under the MIT license.
 
-# Dependencies
+### Dependencies
 
 You must have these dependencies installed.
 
@@ -16,11 +16,11 @@ You must have these dependencies installed.
 - [Nbt Crafting](https://modrinth.com/mod/nbt-crafting) >=2.2.3 for 1.19.2
 - [Fabric Api](https://modrinth.com/mod/fabric-api) * for 1.19.2
 
-# Credits
+### Credits
 [Siphalor](https://modrinth.com/user/Siphalor) - Nbt Crafting
 
 # Items
-![Items](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/e36a69d9295da65e92b7a927a0b6132bc3c98acf.png)
+![Items](https://cdn-raw.modrinth.com/data/GEgw8gIN/images/1e20c92d33978acc85cd07305243befe5d64ac5a.png)
 
 ### Gunpowder bomb:
   A simple bomb that explodes within a certain time and with a certain power.
@@ -38,6 +38,12 @@ You must have these dependencies installed.
 
 ### Incendiary Pack:
   Bigger incendiary bomb with a wider range and more fire projectiles.
+
+### Dynamite Bomb:
+  A bomb made with a higher tier explosive (dynamite).
+
+### Dynamite Pack:
+  A gunpowder pack but made with dynamite.
 
 ### Cast Iron Gunpowder Bomb:
   A bomb that is a little less powerful than a gunpowder pack and has the same power of TNT.
@@ -75,6 +81,18 @@ You must have these dependencies installed.
 ### Beeswax Fire Lobber:
   When right clicked throws fire projectiles in the direction used.
   Has a durability of 64 like flint and steel.
+
+### Explosive Mixture:
+  Mixture used to make dynamite.
+
+### Dynamite Chunk:
+  Better gunpowder!
+
+### Fuse:
+  A fuse.
+
+### Beeswax Fire Paste:
+  Used to make a lot of fire.
 
 # Recipes
 
@@ -124,7 +142,6 @@ Incendiary Pack:
 # Planned Features
 
   - Different types of fireworks.
-  - A new tear of explosives.
   - All colors of smoke bombs.
   - A multiplier for how many times you do something in the fireworks table
 
